@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "videos_metiers",
+  "info": {
+    "singularName": "videos-metier",
+    "pluralName": "videos-metiers",
+    "displayName": "Videos - metier"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

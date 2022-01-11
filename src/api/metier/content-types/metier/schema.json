@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "metiers",
+  "info": {
+    "singularName": "metier",
+    "pluralName": "metiers",
+    "displayName": "Métier",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "emploi_reperes": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::emploi-repere.emploi-repere",
+      "mappedBy": "metier"
+    },
+    "famille_de_metier": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::famille-de-metier.famille-de-metier",
+      "inversedBy": "metiers"
+    }
+  }
+}
