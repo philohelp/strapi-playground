@@ -17,7 +17,8 @@
     "@strapi/plugin-users-permissions": "4.0.4",
     "@strapi/provider-upload-cloudinary": "^4.0.4",
     "@strapi/strapi": "4.0.4",
-    "pg": "8.6.0"
+    "pg": "8.6.0",
+    "strapi-plugin-wysiwyg-tui-editor": "^4.0.1"
   },
   "author": {
     "name": "A Strapi developer"
