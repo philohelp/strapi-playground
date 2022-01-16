@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_block_activite",
+  "info": {
+    "displayName": "Activité",
+    "icon": "angle-double-down"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "content": {
+      "type": "richtext"
+    }
+  }
+}

@@ -26,13 +26,20 @@
       "inversedBy": "emploi_reperes"
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
+    },
+    "Blocks": {
+      "type": "dynamiczone",
+      "components": [
+        "block.activite"
+      ]
     }
   }
 }

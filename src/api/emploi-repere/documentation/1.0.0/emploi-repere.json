@@ -450,6 +450,33 @@
                                                             }
                                                           }
                                                         },
+                                                        "Blocks": {
+                                                          "type": "array",
+                                                          "items": {
+                                                            "anyOf": [
+                                                              {
+                                                                "type": "object",
+                                                                "properties": {
+                                                                  "id": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "__component": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "title": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "subtitle": {
+                                                                    "type": "string"
+                                                                  },
+                                                                  "content": {
+                                                                    "type": "string"
+                                                                  }
+                                                                }
+                                                              }
+                                                            ]
+                                                          }
+                                                        },
                                                         "createdAt": {
                                                           "type": "string",
                                                           "format": "date-time"
@@ -1266,6 +1293,33 @@
                                   }
                                 }
                               },
+                              "Blocks": {
+                                "type": "array",
+                                "items": {
+                                  "anyOf": [
+                                    {
+                                      "type": "object",
+                                      "properties": {
+                                        "id": {
+                                          "type": "string"
+                                        },
+                                        "__component": {
+                                          "type": "string"
+                                        },
+                                        "title": {
+                                          "type": "string"
+                                        },
+                                        "subtitle": {
+                                          "type": "string"
+                                        },
+                                        "content": {
+                                          "type": "string"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
                               "createdAt": {
                                 "type": "string",
                                 "format": "date-time"
@@ -2025,6 +2079,33 @@
                                                           }
                                                         }
                                                       },
+                                                      "Blocks": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "anyOf": [
+                                                            {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "__component": {
+                                                                  "type": "string"
+                                                                },
+                                                                "title": {
+                                                                  "type": "string"
+                                                                },
+                                                                "subtitle": {
+                                                                  "type": "string"
+                                                                },
+                                                                "content": {
+                                                                  "type": "string"
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -2839,6 +2920,33 @@
                                     }
                                   }
                                 }
+                              }
+                            },
+                            "Blocks": {
+                              "type": "array",
+                              "items": {
+                                "anyOf": [
+                                  {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "__component": {
+                                        "type": "string"
+                                      },
+                                      "title": {
+                                        "type": "string"
+                                      },
+                                      "subtitle": {
+                                        "type": "string"
+                                      },
+                                      "content": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                ]
                               }
                             },
                             "createdAt": {
@@ -3518,6 +3626,33 @@
                                                           }
                                                         }
                                                       },
+                                                      "Blocks": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "anyOf": [
+                                                            {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "__component": {
+                                                                  "type": "string"
+                                                                },
+                                                                "title": {
+                                                                  "type": "string"
+                                                                },
+                                                                "subtitle": {
+                                                                  "type": "string"
+                                                                },
+                                                                "content": {
+                                                                  "type": "string"
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -4332,6 +4467,33 @@
                                     }
                                   }
                                 }
+                              }
+                            },
+                            "Blocks": {
+                              "type": "array",
+                              "items": {
+                                "anyOf": [
+                                  {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "__component": {
+                                        "type": "string"
+                                      },
+                                      "title": {
+                                        "type": "string"
+                                      },
+                                      "subtitle": {
+                                        "type": "string"
+                                      },
+                                      "content": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                ]
                               }
                             },
                             "createdAt": {
@@ -5002,6 +5164,33 @@
                                                           }
                                                         }
                                                       },
+                                                      "Blocks": {
+                                                        "type": "array",
+                                                        "items": {
+                                                          "anyOf": [
+                                                            {
+                                                              "type": "object",
+                                                              "properties": {
+                                                                "id": {
+                                                                  "type": "string"
+                                                                },
+                                                                "__component": {
+                                                                  "type": "string"
+                                                                },
+                                                                "title": {
+                                                                  "type": "string"
+                                                                },
+                                                                "subtitle": {
+                                                                  "type": "string"
+                                                                },
+                                                                "content": {
+                                                                  "type": "string"
+                                                                }
+                                                              }
+                                                            }
+                                                          ]
+                                                        }
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -5818,6 +6007,33 @@
                                 }
                               }
                             },
+                            "Blocks": {
+                              "type": "array",
+                              "items": {
+                                "anyOf": [
+                                  {
+                                    "type": "object",
+                                    "properties": {
+                                      "id": {
+                                        "type": "string"
+                                      },
+                                      "__component": {
+                                        "type": "string"
+                                      },
+                                      "title": {
+                                        "type": "string"
+                                      },
+                                      "subtitle": {
+                                        "type": "string"
+                                      },
+                                      "content": {
+                                        "type": "string"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            },
                             "createdAt": {
                               "type": "string",
                               "format": "date-time"
@@ -6073,6 +6289,30 @@
                           }
                         ],
                         "example": "string or id"
+                      },
+                      "Blocks": {
+                        "type": "array",
+                        "items": {
+                          "anyOf": [
+                            {
+                              "type": "object",
+                              "properties": {
+                                "__component": {
+                                  "type": "string"
+                                },
+                                "title": {
+                                  "type": "string"
+                                },
+                                "subtitle": {
+                                  "type": "string"
+                                },
+                                "content": {
+                                  "type": "string"
+                                }
+                              }
+                            }
+                          ]
+                        }
                       },
                       "createdAt": {
                         "type": "string",
