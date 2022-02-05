@@ -15,7 +15,13 @@ module.exports = ({ env }) => ({
   },
   search: {
     enabled: true,
-    excludedFields: ["createdAt", "createdBy", "updatedBy"],
+    excludedFields: [
+      "createdAt",
+      "createdBy",
+      "updatedBy",
+      "metiers",
+      "publishedAt",
+    ],
     config: {
       provider: "algolia",
       providerOptions: {
