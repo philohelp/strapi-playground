@@ -33,4 +33,17 @@ module.exports = ({ env }) => ({
       ],
     },
   },
+  email: {
+    config: {
+      provider: "sendmail",
+      // providerOptions: {
+      //   apiKey: env("SENDGRID_API_KEY"),
+      // },
+      settings: {
+        defaultFrom: "thpoirier@gmail.com",
+        defaultReplyTo: "thpoirier@gmail.com",
+        testAddress: "thomas@surunnuage.dev",
+      },
+    },
+  },
 });

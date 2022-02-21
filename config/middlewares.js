@@ -5,9 +5,23 @@ module.exports = [
     config: {
       contentSecurityPolicy: {
         directives: {
-          "script-src": ["'self'", "'unsafe-inline'", "cdn.jsdelivr.net"],
+          "script-src": [
+            "'self'",
+            "'unsafe-inline'",
+            "cdn.jsdelivr.net",
+            "editor.unlayer.com",
+          ],
           "connect-src": ["'self'", "https:"],
-          "img-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
+          "frame-src": ["'self'", "editor.unlayer.com"],
+          "img-src": [
+            "'self'",
+            "data:",
+            "blob:",
+            "res.cloudinary.com",
+            "cdn.jsdelivr.net",
+            "strapi.io",
+            "s3.amazonaws.com",
+          ],
           "media-src": ["'self'", "data:", "blob:", "res.cloudinary.com"],
           upgradeInsecureRequests: null,
         },
