@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1236,11 +1237,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/famille-de-metiers"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2369,6 +2371,7 @@
           "Famille-de-metier"
         ],
         "parameters": [],
+        "operationId": "post/famille-de-metiers",
         "requestBody": {
           "required": true,
           "content": {
@@ -2394,6 +2397,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3533,11 +3537,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/famille-de-metiers/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4677,6 +4682,7 @@
             }
           }
         ],
+        "operationId": "put/famille-de-metiers/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -4751,6 +4757,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4921,7 +4928,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/famille-de-metiers/{id}"
       }
     }
   }

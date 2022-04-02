@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -586,11 +587,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/videos-metiers"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1069,6 +1071,7 @@
           "Videos-metier"
         ],
         "parameters": [],
+        "operationId": "post/videos-metiers",
         "requestBody": {
           "required": true,
           "content": {
@@ -1131,6 +1134,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1620,11 +1624,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/videos-metiers/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2114,6 +2119,7 @@
             }
           }
         ],
+        "operationId": "put/videos-metiers/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -2174,6 +2180,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -2344,7 +2351,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/videos-metiers/{id}"
       }
     }
   }

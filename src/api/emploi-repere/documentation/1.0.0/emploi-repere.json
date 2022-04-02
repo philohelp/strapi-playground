@@ -4,6 +4,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1630,11 +1631,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/emploi-reperes"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3157,6 +3159,7 @@
           "Emploi-repere"
         ],
         "parameters": [],
+        "operationId": "post/emploi-reperes",
         "requestBody": {
           "required": true,
           "content": {
@@ -3182,6 +3185,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4715,11 +4719,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/emploi-reperes/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6253,6 +6258,7 @@
             }
           }
         ],
+        "operationId": "put/emploi-reperes/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -6359,6 +6365,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6529,7 +6536,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/emploi-reperes/{id}"
       }
     }
   }

@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-02-21T13:45:57.593Z"
+    "x-generation-date": "2022-04-02T12:30:28.213Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -54,6 +54,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -1680,11 +1681,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/emploi-reperes"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -3207,6 +3209,7 @@
           "Emploi-repere"
         ],
         "parameters": [],
+        "operationId": "post/emploi-reperes",
         "requestBody": {
           "required": true,
           "content": {
@@ -3232,6 +3235,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -4765,11 +4769,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/emploi-reperes/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6303,6 +6308,7 @@
             }
           }
         ],
+        "operationId": "put/emploi-reperes/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -6409,6 +6415,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -6579,13 +6586,14 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/emploi-reperes/{id}"
       }
     },
     "/famille-de-metiers": {
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -7818,11 +7826,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/famille-de-metiers"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -8951,6 +8960,7 @@
           "Famille-de-metier"
         ],
         "parameters": [],
+        "operationId": "post/famille-de-metiers",
         "requestBody": {
           "required": true,
           "content": {
@@ -8976,6 +8986,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -10115,11 +10126,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/famille-de-metiers/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11259,6 +11271,7 @@
             }
           }
         ],
+        "operationId": "put/famille-de-metiers/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -11333,6 +11346,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -11503,13 +11517,14 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/famille-de-metiers/{id}"
       }
     },
     "/metiers": {
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -12759,11 +12774,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/metiers"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -13909,6 +13925,7 @@
           "Metier"
         ],
         "parameters": [],
+        "operationId": "post/metiers",
         "requestBody": {
           "required": true,
           "content": {
@@ -13934,6 +13951,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -15090,11 +15108,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/metiers/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16251,6 +16270,7 @@
             }
           }
         ],
+        "operationId": "put/metiers/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -16336,6 +16356,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -16506,13 +16527,14 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/metiers/{id}"
       }
     },
     "/videos-intervenants": {
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17095,11 +17117,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/videos-intervenants"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -17578,6 +17601,7 @@
           "Videos-intervenant"
         ],
         "parameters": [],
+        "operationId": "post/videos-intervenants",
         "requestBody": {
           "required": true,
           "content": {
@@ -17603,6 +17627,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18092,11 +18117,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/videos-intervenants/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18586,6 +18612,7 @@
             }
           }
         ],
+        "operationId": "put/videos-intervenants/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -18646,6 +18673,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -18816,13 +18844,14 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/videos-intervenants/{id}"
       }
     },
     "/videos-metiers": {
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19405,11 +19434,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/videos-metiers"
       },
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -19888,6 +19918,7 @@
           "Videos-metier"
         ],
         "parameters": [],
+        "operationId": "post/videos-metiers",
         "requestBody": {
           "required": true,
           "content": {
@@ -19950,6 +19981,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20439,11 +20471,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/videos-metiers/{id}"
       },
       "put": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -20933,6 +20966,7 @@
             }
           }
         ],
+        "operationId": "put/videos-metiers/{id}",
         "requestBody": {
           "required": true,
           "content": {
@@ -20993,6 +21027,7 @@
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21163,13 +21198,14 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/videos-metiers/{id}"
       }
     },
     "/email": {
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21348,6 +21384,7 @@
           "Email"
         ],
         "parameters": [],
+        "operationId": "post/email",
         "requestBody": {
           "required": true,
           "content": {
@@ -21373,6 +21410,7 @@
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21551,6 +21589,7 @@
           "Email"
         ],
         "parameters": [],
+        "operationId": "post/email/test",
         "requestBody": {
           "required": true,
           "content": {
@@ -21576,6 +21615,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -21754,13 +21794,14 @@
           "Email"
         ],
         "parameters": [],
-        "requestBody": {}
+        "operationId": "get/email/settings"
       }
     },
     "/upload": {
       "post": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22288,6 +22329,7 @@
           "Upload - file"
         ],
         "parameters": [],
+        "operationId": "post/upload",
         "requestBody": {
           "required": true,
           "content": {
@@ -22329,6 +22371,7 @@
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -22856,13 +22899,14 @@
           "Upload - file"
         ],
         "parameters": [],
-        "requestBody": {}
+        "operationId": "get/upload/files/count"
       }
     },
     "/upload/files": {
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -23494,13 +23538,14 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/upload/files"
       }
     },
     "/upload/files/{id}": {
       "get": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24039,11 +24084,12 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "get/upload/files/{id}"
       },
       "delete": {
         "responses": {
           "200": {
+            "description": "OK",
             "content": {
               "application/json": {
                 "schema": {
@@ -24214,7 +24260,7 @@
             }
           }
         ],
-        "requestBody": {}
+        "operationId": "delete/upload/files/{id}"
       }
     }
   }
