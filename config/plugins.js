@@ -35,15 +35,25 @@ module.exports = ({ env }) => ({
   },
   email: {
     config: {
-      provider: "sendgrid",
-      providerOptions: {
-        apiKey: env("SENDGRID_API_KEY"),
-      },
+      provider: "sendmail",
       settings: {
-        defaultFrom: "thpoirier@gmail.com",
-        defaultReplyTo: "thpoirier@gmail.com",
-        testAddress: "thomas@surunnuage.dev",
+        defaultFrom: "thomas@surunnuage.dev",
+        defaultReplyTo: "thomas@surunnuage.dev",
+        testAddress: "thpoirier@gmail.com",
       },
     },
   },
+  // email: {
+  //   config: {
+  //     provider: "sendgrid",
+  //     providerOptions: {
+  //       apiKey: env("SENDGRID_API_KEY"),
+  //     },
+  //     settings: {
+  //       defaultFrom: "thpoirier@gmail.com",
+  //       defaultReplyTo: "thpoirier@gmail.com",
+  //       testAddress: "thomas@surunnuage.dev",
+  //     },
+  //   },
+  // },
 });
