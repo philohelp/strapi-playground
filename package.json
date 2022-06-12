@@ -27,7 +27,6 @@
     "qs": "6.10.1",
     "react-select": "^4.0.2",
     "strapi-plugin-ckeditor5": "^2.0.0-rc.2",
-    "strapi-plugin-email-designer": "^2.0.9",
     "styled-components": "^5.2.1"
   },
   "author": {
