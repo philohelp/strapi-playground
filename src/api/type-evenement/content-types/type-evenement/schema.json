@@ -29,6 +29,12 @@
       "relation": "oneToMany",
       "target": "api::evenement.evenement",
       "mappedBy": "type_d_evenement"
+    },
+    "users": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "type_d_evenements"
     }
   }
 }
