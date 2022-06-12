@@ -11,6 +11,7 @@
   },
   "devDependencies": {},
   "dependencies": {
+    "@_sh/strapi-plugin-ckeditor": "^1.1.0",
     "@mattie-bundle/strapi-plugin-search": "^1.0.0-alpha.3",
     "@mattie-bundle/strapi-provider-search-algolia": "^1.0.0-alpha.3",
     "@strapi/icons": "^0.0.1-alpha.4",
@@ -21,13 +22,7 @@
     "@strapi/provider-email-sendgrid": "4.1.12",
     "@strapi/provider-upload-cloudinary": "4.1.12",
     "@strapi/strapi": "4.1.12",
-    "formik": "^2.2.9",
-    "immer": "9.0.6",
-    "pg": "8.6.0",
-    "qs": "6.10.1",
-    "react-select": "^4.0.2",
-    "strapi-plugin-ckeditor5": "^2.0.0-rc.2",
-    "styled-components": "^5.2.1"
+    "pg": "8.6.0"
   },
   "author": {
     "name": "Thpo"
