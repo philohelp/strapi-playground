@@ -1,5 +1,5 @@
 {
-  "/famille-de-metiers": {
+  "/evenements": {
     "get": {
       "responses": {
         "200": {
@@ -7,7 +7,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FamilleDeMetierListResponse"
+                "$ref": "#/components/schemas/EvenementListResponse"
               }
             }
           }
@@ -64,7 +64,7 @@
         }
       },
       "tags": [
-        "Famille-de-metier"
+        "Evenement"
       ],
       "parameters": [
         {
@@ -148,7 +148,7 @@
           }
         }
       ],
-      "operationId": "get/famille-de-metiers"
+      "operationId": "get/evenements"
     },
     "post": {
       "responses": {
@@ -157,7 +157,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FamilleDeMetierResponse"
+                "$ref": "#/components/schemas/EvenementResponse"
               }
             }
           }
@@ -214,23 +214,23 @@
         }
       },
       "tags": [
-        "Famille-de-metier"
+        "Evenement"
       ],
       "parameters": [],
-      "operationId": "post/famille-de-metiers",
+      "operationId": "post/evenements",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/FamilleDeMetierRequest"
+              "$ref": "#/components/schemas/EvenementRequest"
             }
           }
         }
       }
     }
   },
-  "/famille-de-metiers/{id}": {
+  "/evenements/{id}": {
     "get": {
       "responses": {
         "200": {
@@ -238,7 +238,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FamilleDeMetierResponse"
+                "$ref": "#/components/schemas/EvenementResponse"
               }
             }
           }
@@ -295,7 +295,7 @@
         }
       },
       "tags": [
-        "Famille-de-metier"
+        "Evenement"
       ],
       "parameters": [
         {
@@ -309,7 +309,7 @@
           }
         }
       ],
-      "operationId": "get/famille-de-metiers/{id}"
+      "operationId": "get/evenements/{id}"
     },
     "put": {
       "responses": {
@@ -318,7 +318,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/FamilleDeMetierResponse"
+                "$ref": "#/components/schemas/EvenementResponse"
               }
             }
           }
@@ -375,7 +375,7 @@
         }
       },
       "tags": [
-        "Famille-de-metier"
+        "Evenement"
       ],
       "parameters": [
         {
@@ -389,13 +389,13 @@
           }
         }
       ],
-      "operationId": "put/famille-de-metiers/{id}",
+      "operationId": "put/evenements/{id}",
       "requestBody": {
         "required": true,
         "content": {
           "application/json": {
             "schema": {
-              "$ref": "#/components/schemas/FamilleDeMetierRequest"
+              "$ref": "#/components/schemas/EvenementRequest"
             }
           }
         }
@@ -466,7 +466,7 @@
         }
       },
       "tags": [
-        "Famille-de-metier"
+        "Evenement"
       ],
       "parameters": [
         {
@@ -480,7 +480,7 @@
           }
         }
       ],
-      "operationId": "delete/famille-de-metiers/{id}"
+      "operationId": "delete/evenements/{id}"
     }
   }
 }
