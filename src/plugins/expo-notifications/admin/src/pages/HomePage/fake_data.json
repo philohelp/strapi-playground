@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "100% de reçus à l'appel à propositions 'Ingénieurs 3D' !",
+    "subtitle": "Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "date": "20 oct. 2022",
+    "data": {
+      "slug": "slug-1"
+    }
+  },
+  {
+    "id": 2,
+    "title": "Du nouveau sur le front des stats emploi",
+    "subtitle": "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    "date": "10 oct. 2022",
+    "data": {
+      "slug": "slug-2"
+    }
+  },
+  {
+    "id": 3,
+    "title": "Un métier à découvrir: réalisateur de scènes AR-VR",
+    "subtitle": "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "date": "13 sept. 2022",
+    "data": {
+      "slug": "slug-3"
+    }
+  },
+  {
+    "id": 4,
+    "title": "Près de 40 000 visiteurs sur le site CPNEF-AV !",
+    "subtitle": "Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro.",
+    "date": "18 août 2022",
+    "data": {
+      "slug": "slug-4"
+    }
+  }
+]

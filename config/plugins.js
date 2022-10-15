@@ -1,5 +1,9 @@
 module.exports = ({ env }) => ({
   ckeditor: true,
+  "expo-notifications": {
+    enabled: true,
+    resolve: "./src/plugins/expo-notifications",
+  },
   "users-permissions": {
     config: {
       jwtSecret: env("JWT_SECRET"),
