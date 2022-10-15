@@ -1,6 +1,8 @@
 import React from "react";
 
 import { Box } from "@strapi/design-system/Box";
+import { Illo } from "../../components/Illo";
+import { EmptyStateLayout } from "@strapi/design-system/EmptyStateLayout";
 import {
   Field,
   FieldLabel,
@@ -66,13 +68,21 @@ export default function Left({ notifications, formik, sendTest, sendForReal }) {
       <Divider />
       <Box paddingTop={6} paddingBottom={6}>
         <Typography variant="beta">Notifications envoyées</Typography>
-        <Box paddingTop={6}>
-          {notifications.map((item) => (
-            <div key={item.id}>
-              <NotificationItem item={item} />
-            </div>
-          ))}
-        </Box>
+        {notifications.length > 0 ? (
+          <Box paddingTop={6}>
+            {notifications.map((item) => (
+              <div key={item.id}>
+                <NotificationItem item={item} />
+              </div>
+            ))}
+          </Box>
+        ) : (
+          <EmptyStateLayout
+            shadow={null}
+            icon={<Illo />}
+            content="Vous n'avez pas encore envoyé de notifications..."
+          />
+        )}
       </Box>
     </Box>
   );

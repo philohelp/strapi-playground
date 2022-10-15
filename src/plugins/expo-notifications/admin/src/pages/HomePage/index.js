@@ -1,13 +1,18 @@
-import React, { useState } from "react";
-import pluginId from "../../pluginId";
+import React, { useEffect, useState } from "react";
+
+// import pluginId from "../../pluginId";
+import { LoadingIndicatorPage } from "@strapi/helper-plugin";
+
+import notificationsRequests from "../../api/exponotification";
+
 import { Icon } from "@strapi/design-system/Icon";
 import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import {
-  Layout,
+  // Layout,
   BaseHeaderLayout,
-  HeaderLayout,
+  // HeaderLayout,
   TwoColsLayout,
   ContentLayout,
 } from "@strapi/design-system/Layout";
@@ -15,7 +20,6 @@ import {
 import Left from "./left";
 import Right from "./right";
 
-import fakeNotifications from "./fake_data.json";
 import receivers from "./fake_receivers.json";
 
 const Pencil = () => (
@@ -28,9 +32,22 @@ const Pencil = () => (
 );
 
 const HomePage = () => {
+  const [isLoading, setIsLoading] = useState(true);
   const [tokens, setTokens] = useState([]);
   const [testMode, setTestMode] = useState(false);
-  const [notifications, setNotifications] = useState(fakeNotifications);
+  const [notifications, setNotifications] = useState([]);
+
+  const fetchData = async () => {
+    if (isLoading === false) setIsLoading(true);
+    const currentNotifications =
+      await notificationsRequests.getAllNotifications();
+    setNotifications(currentNotifications);
+    setIsLoading(false);
+  };
+
+  useEffect(async () => {
+    await fetchData();
+  }, []);
 
   const addToken = (token) => {
     setTokens([...tokens, token]);
@@ -44,6 +61,10 @@ const HomePage = () => {
   const removeAll = () => {
     setTokens([]);
   };
+  const addNewNotificationToState = (newNotification) => {
+    setNotifications([...notifications, newNotification]);
+    resetForm();
+  };
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -55,13 +76,9 @@ const HomePage = () => {
     onSubmit: async (values) => {
       console.log("values", values, "testMode", testMode);
       if (!testMode) {
-        const newNotification = {
-          ...values,
-          date: new Date().toLocaleString(),
-          id: notifications.length,
-        };
-        setNotifications([...notifications, newNotification]);
-        resetForm();
+        await notificationsRequests
+          .createNotification(values)
+          .then((res) => addNewNotificationToState(res));
       }
     },
   });
@@ -79,6 +96,9 @@ const HomePage = () => {
     setTestMode(false);
     formik.handleSubmit();
   };
+
+  if (isLoading) return <LoadingIndicatorPage />;
+
   return (
     <div>
       <BaseHeaderLayout
