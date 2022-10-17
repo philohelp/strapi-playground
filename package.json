@@ -23,6 +23,7 @@
     "@strapi/provider-email-sendgrid": "4.4.3",
     "@strapi/provider-upload-cloudinary": "4.4.3",
     "@strapi/strapi": "4.4.3",
+    "expo-server-sdk": "^3.6.0",
     "pg": "8.6.0",
     "strapi-plugin-vercel-deploy": "^1.1.0"
   },
