@@ -1,16 +1,26 @@
 import { request } from "@strapi/helper-plugin";
 
 const expoNotificationsRequests = {
-  getAllNotifications: async () => {
-    return await request("/expo-notifications/find", {
+  getPagedNotifications: async (page = 1, pageSize = 10) => {
+    console.log("page", page, "pageSize", pageSize);
+    return await request(
+      `/expo-notifications/findFrom/?page=${page}&pageSize=${pageSize}`,
+      {
+        method: "GET",
+      }
+    );
+  },
+
+  getPagedRecipients: async (start = 0) => {
+    return await request(`/expo-notifications/recipientsFrom/${start}`, {
       method: "GET",
     });
   },
 
-  createNotification: async (data) => {
+  createNotification: async (data, tokens) => {
     return await request(`/expo-notifications/create`, {
       method: "POST",
-      body: { data: data },
+      body: { data: data, tokens: tokens },
     });
   },
 

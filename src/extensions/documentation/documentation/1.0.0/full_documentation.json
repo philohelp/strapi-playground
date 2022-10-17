@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2022-10-15T16:31:20.765Z"
+    "x-generation-date": "2022-10-17T00:01:03.476Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -8248,6 +8248,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -9011,6 +9014,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "expoPushToken": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -9809,6 +9815,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -10572,6 +10581,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "expoPushToken": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -21320,6 +21332,9 @@
                                                           }
                                                         }
                                                       },
+                                                      "expoPushToken": {
+                                                        "type": "string"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -22099,6 +22114,9 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "expoPushToken": {
+                                                        "type": "string"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -22913,6 +22931,9 @@
                                                           }
                                                         }
                                                       },
+                                                      "expoPushToken": {
+                                                        "type": "string"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -23692,6 +23713,9 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "expoPushToken": {
+                                                        "type": "string"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -32326,6 +32350,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -33076,6 +33103,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "expoPushToken": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -33861,6 +33891,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -34611,6 +34644,9 @@
                                               }
                                             }
                                           }
+                                        },
+                                        "expoPushToken": {
+                                          "type": "string"
                                         },
                                         "createdAt": {
                                           "type": "string",
@@ -35385,6 +35421,9 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "expoPushToken": {
+                                                        "type": "string"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -36165,6 +36204,9 @@
                                                             }
                                                           }
                                                         }
+                                                      },
+                                                      "expoPushToken": {
+                                                        "type": "string"
                                                       },
                                                       "createdAt": {
                                                         "type": "string",
@@ -36979,6 +37021,9 @@
                                                           }
                                                         }
                                                       },
+                                                      "expoPushToken": {
+                                                        "type": "string"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -37759,6 +37804,9 @@
                                                           }
                                                         }
                                                       },
+                                                      "expoPushToken": {
+                                                        "type": "string"
+                                                      },
                                                       "createdAt": {
                                                         "type": "string",
                                                         "format": "date-time"
@@ -38045,6 +38093,9 @@
                   ],
                   "example": "string or id"
                 }
+              },
+              "expoPushToken": {
+                "type": "string"
               }
             }
           }
@@ -38677,6 +38728,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -38793,6 +38847,9 @@
                     }
                   }
                 }
+              },
+              "expoPushToken": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -39467,6 +39524,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -39583,6 +39643,9 @@
                     }
                   }
                 }
+              },
+              "expoPushToken": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -40290,6 +40353,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -40406,6 +40472,9 @@
                     }
                   }
                 }
+              },
+              "expoPushToken": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",
@@ -41080,6 +41149,9 @@
                                             }
                                           }
                                         },
+                                        "expoPushToken": {
+                                          "type": "string"
+                                        },
                                         "createdAt": {
                                           "type": "string",
                                           "format": "date-time"
@@ -41196,6 +41268,9 @@
                     }
                   }
                 }
+              },
+              "expoPushToken": {
+                "type": "string"
               },
               "createdAt": {
                 "type": "string",

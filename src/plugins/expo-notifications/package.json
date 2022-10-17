@@ -8,7 +8,9 @@
     "kind": "plugin",
     "displayName": "Expo Notifications"
   },
-  "dependencies": {},
+  "dependencies": {
+    "expo-server-sdk": "^3.6.0"
+  },
   "author": {
     "name": "A Strapi developer"
   },

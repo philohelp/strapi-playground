@@ -34,7 +34,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "type_d_evenements"
+      "mappedBy": "type_d_evenements"
     }
   }
 }

@@ -68,6 +68,9 @@
       "relation": "manyToMany",
       "target": "api::type-evenement.type-evenement",
       "inversedBy": "users"
+    },
+    "expoPushToken": {
+      "type": "string"
     }
   }
 }

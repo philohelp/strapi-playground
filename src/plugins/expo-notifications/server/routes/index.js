@@ -1,8 +1,8 @@
 module.exports = [
   {
     method: "GET",
-    path: "/",
-    handler: "myController.index",
+    path: "/find",
+    handler: "exponotification.find",
     config: {
       policies: [],
       auth: false,
@@ -10,8 +10,17 @@ module.exports = [
   },
   {
     method: "GET",
-    path: "/find",
-    handler: "exponotification.find",
+    path: "/findFrom",
+    handler: "exponotification.findFrom",
+    config: {
+      policies: [],
+      auth: false,
+    },
+  },
+  {
+    method: "GET",
+    path: "/recipientsFrom/:start",
+    handler: "exponotification.recipientsFrom",
     config: {
       policies: [],
       auth: false,
