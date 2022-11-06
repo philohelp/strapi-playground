@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -20,20 +21,22 @@
       "type": "text"
     },
     "documents": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "audios"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
     },
     "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "commission": {
       "type": "relation",

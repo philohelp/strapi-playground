@@ -23,7 +23,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "plugin::users-permissions.user",
-      "inversedBy": "commissions"
+      "mappedBy": "commissions"
     },
     "posts": {
       "type": "relation",

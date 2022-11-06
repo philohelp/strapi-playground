@@ -77,6 +77,17 @@
       "relation": "manyToMany",
       "target": "api::commission.commission",
       "inversedBy": "membres"
+    },
+    "Bureau": {
+      "type": "boolean",
+      "default": false
+    },
+    "CA": {
+      "type": "boolean",
+      "default": false
+    },
+    "AG": {
+      "type": "boolean"
     }
   }
 }
