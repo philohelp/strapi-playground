@@ -87,7 +87,8 @@
       "default": false
     },
     "AG": {
-      "type": "boolean"
+      "type": "boolean",
+      "default": true
     }
   }
 }
