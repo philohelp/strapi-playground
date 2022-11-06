@@ -71,6 +71,12 @@
     },
     "expoPushToken": {
       "type": "string"
+    },
+    "commissions": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::commission.commission",
+      "inversedBy": "membres"
     }
   }
 }
