@@ -25,8 +25,7 @@
     "@strapi/strapi": "4.4.7",
     "expo-server-sdk": "^3.6.0",
     "pg": "8.6.0",
-    "strapi-plugin-vercel-deploy": "^1.1.0",
-    "strapi-stripe": "^2.5.1"
+    "strapi-plugin-vercel-deploy": "^1.1.0"
   },
   "author": {
     "name": "Thpo"
