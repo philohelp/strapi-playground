@@ -1,0 +1,25 @@
+{
+  "name": "sundev-billing",
+  "version": "0.0.0",
+  "description": "A plugin to facilitate the maintenance billing of sundev productions.",
+  "strapi": {
+    "name": "sundev-billing",
+    "description": "A plugin to facilitate the maintenance billing of sundev productions.",
+    "kind": "plugin",
+    "displayName": "Sundev Billing"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

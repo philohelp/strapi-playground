@@ -1,4 +1,8 @@
 module.exports = ({ env }) => ({
+  "sundev-billing": {
+    enabled: true,
+    resolve: "./src/plugins/sundev-billing",
+  },
   ckeditor: true,
   "expo-notifications": {
     enabled: true,

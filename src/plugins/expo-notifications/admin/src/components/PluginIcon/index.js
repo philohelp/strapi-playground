@@ -5,8 +5,8 @@
  */
 
 import React from "react";
-import Brush from "@strapi/icons/Brush";
+import ManyWays from "@strapi/icons/ManyWays";
 
-const PluginIcon = () => <Brush />;
+const PluginIcon = () => <ManyWays />;
 
 export default PluginIcon;
