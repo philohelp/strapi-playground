@@ -1,18 +1,37 @@
-import { useState, useEffect } from "react";
-
-import React from "react";
+import React, { useState, useEffect } from "react";
 import pluginId from "../../pluginId";
 import stripeSundevRequests from "../../api";
+
+import {
+  // Layout,
+  BaseHeaderLayout,
+  // HeaderLayout,
+  TwoColsLayout,
+  ContentLayout,
+} from "@strapi/design-system/Layout";
+
+import MyInfos from "./my_infos";
+
+function MyInvoices() {
+  return <div>My invoices</div>;
+}
 
 const HomePage = () => {
   useEffect(async () => {
     const invoices = await stripeSundevRequests.getInvoices();
-    console.log("invoices", invoices);
+    const customer = await stripeSundevRequests.getCustomer();
+    console.log("customer", customer);
   }, []);
   return (
     <div>
-      <h1>{pluginId}&apos;s HomePage</h1>
-      <p>Happy coding</p>
+      <BaseHeaderLayout
+        title="Sur un nuage"
+        subtitle="Retrouvez ici les informations concernant votre compte"
+        as="h2"
+      />
+      <ContentLayout>
+        <TwoColsLayout startCol={<MyInfos />} endCol={<MyInvoices />} />
+      </ContentLayout>
     </div>
   );
 };

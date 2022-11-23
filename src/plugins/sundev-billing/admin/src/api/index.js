@@ -6,6 +6,11 @@ const stripeSundevRequests = {
       method: "GET",
     });
   },
+  getCustomer: async () => {
+    return await request(`/sundev-billing/get-customer`, {
+      method: "GET",
+    });
+  },
 };
 
 export default stripeSundevRequests;

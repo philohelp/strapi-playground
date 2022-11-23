@@ -1,10 +1,16 @@
 "use strict";
 
 module.exports = ({ strapi }) => ({
-  async index(ctx) {
+  async getInvoices(ctx) {
     return await strapi
       .plugin("sundev-billing")
       .service("myService")
       .getInvoices();
+  },
+  async getCustomer(ctx) {
+    return await strapi
+      .plugin("sundev-billing")
+      .service("myService")
+      .getCustomer();
   },
 });

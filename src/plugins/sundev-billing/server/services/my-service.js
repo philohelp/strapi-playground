@@ -2,6 +2,24 @@
 
 const fetch = require("node-fetch");
 
+async function fetchCustomer() {
+  try {
+    const res = await fetch(
+      `https://api.stripe.com/v1/customers/${process.env.STRIPE_CUSTOMER_ID}`,
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${process.env.STRIPE_TOKEN}`,
+        },
+      }
+    );
+    return res.json();
+  } catch (err) {
+    console.dir(err, { depth: null });
+  }
+}
+
 async function fetchInvoices() {
   try {
     const res = await fetch(
@@ -23,7 +41,10 @@ async function fetchInvoices() {
 module.exports = ({ strapi }) => ({
   async getInvoices() {
     const invoices = await fetchInvoices();
-    // return "hello you";
     return invoices;
+  },
+  async getCustomer() {
+    const customer = await fetchCustomer();
+    return customer;
   },
 });
