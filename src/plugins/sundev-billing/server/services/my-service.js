@@ -1,11 +1,12 @@
 "use strict";
 
 const fetch = require("node-fetch");
+const getPluginConfig = require("../helpers/pluginConfig");
 
-async function fetchCustomer() {
+async function fetchCustomer(customerId) {
   try {
     const res = await fetch(
-      `https://api.stripe.com/v1/customers/${process.env.STRIPE_CUSTOMER_ID}`,
+      `https://api.stripe.com/v1/customers/${customerId}`,
       {
         method: "GET",
         headers: {
@@ -20,10 +21,10 @@ async function fetchCustomer() {
   }
 }
 
-async function fetchInvoices() {
+async function fetchInvoices(customerId) {
   try {
     const res = await fetch(
-      `https://api.stripe.com/v1/invoices?customer=${process.env.STRIPE_CUSTOMER_ID}`,
+      `https://api.stripe.com/v1/invoices?customer=${customerId}`,
       {
         method: "GET",
         headers: {
@@ -40,11 +41,13 @@ async function fetchInvoices() {
 
 module.exports = ({ strapi }) => ({
   async getInvoices() {
-    const invoices = await fetchInvoices();
+    const customerId = getPluginConfig(strapi, "customerId");
+    const invoices = await fetchInvoices(customerId);
     return invoices;
   },
   async getCustomer() {
-    const customer = await fetchCustomer();
+    const customerId = getPluginConfig(strapi, "customerId");
+    const customer = await fetchCustomer(customerId);
     return customer;
   },
 });

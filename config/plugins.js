@@ -2,6 +2,11 @@ module.exports = ({ env }) => ({
   "sundev-billing": {
     enabled: true,
     resolve: "./src/plugins/sundev-billing",
+    config: {
+      // customerId: env("STRIPE_CUSTOMER_ID"),
+      // customerId: "cus_MrA2JnxwhH7Ck5", // Dialogues
+      customerId: "cus_MnIUTta2eoXbia", // Test mode
+    },
   },
   ckeditor: true,
   "expo-notifications": {
