@@ -1,6 +1,11 @@
 import { request } from "@strapi/helper-plugin";
 
-const stripeSundevRequests = {
+const myRequests = {
+  getCompanyInfos: async () => {
+    return await request(`/sundev-billing/get-company-infos`, {
+      method: "GET",
+    });
+  },
   getInvoices: async () => {
     return await request(`/sundev-billing/get-invoices`, {
       method: "GET",
@@ -11,6 +16,11 @@ const stripeSundevRequests = {
       method: "GET",
     });
   },
+  updateCustomer: async (newCustomer) => {
+    return await request(`/sundev-billing/update-customer`, {
+      method: "POST",
+    });
+  },
 };
 
-export default stripeSundevRequests;
+export default myRequests;

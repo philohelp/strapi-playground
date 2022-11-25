@@ -50,4 +50,7 @@ module.exports = ({ strapi }) => ({
     const customer = await fetchCustomer(customerId);
     return customer;
   },
+  async updateCustomer(newCustomer) {
+    return "youhouhou";
+  },
 });

@@ -6,6 +6,11 @@ module.exports = ({ env }) => ({
       // customerId: env("STRIPE_CUSTOMER_ID"),
       // customerId: "cus_MrA2JnxwhH7Ck5", // Dialogues
       customerId: "cus_MnIUTta2eoXbia", // Test mode
+      companyName: "Sur un nuage",
+      companyDescription:
+        "Retrouvez toutes les informations concernant votre abonnement.",
+      companyLogo: "https://surunnuage.dev/logo.png",
+      companyIcon: "https://surunnuage.dev/favicon.ico",
     },
   },
   ckeditor: true,

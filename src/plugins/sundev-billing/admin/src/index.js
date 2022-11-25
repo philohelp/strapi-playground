@@ -3,18 +3,35 @@ import pluginPkg from "../../package.json";
 import pluginId from "./pluginId";
 import Initializer from "./components/Initializer";
 import PluginIcon from "./components/PluginIcon";
+import myRequests from "./api";
 
 const name = pluginPkg.strapi.name;
+
+async function getCompanyInfos() {
+  const infos = await myRequests.getCompanyInfos();
+  const companyName = infos.title;
+  console.log("companyName from plugin index", companyName);
+  return companyName;
+}
+
+// function getIntLabel() {
+//   return {
+//     id: `${pluginId}.plugin.name`,
+//     defaultMessage: "Billing",
+//   };
+// }
 
 export default {
   register(app) {
     app.addMenuLink({
       to: `/plugins/${pluginId}`,
       icon: PluginIcon,
+      // intLabel: getIntLabel(),
       intlLabel: {
         id: `${pluginId}.plugin.name`,
         // defaultMessage: name,
         defaultMessage: "Sur un nuage",
+        // defaultMessage: "Billing",
       },
       Component: async () => {
         const component = await import(
