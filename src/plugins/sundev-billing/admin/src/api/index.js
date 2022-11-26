@@ -16,6 +16,14 @@ const myRequests = {
       method: "GET",
     });
   },
+  getSubscriptionItems: async (subscriptionId) => {
+    return await request(
+      `/sundev-billing/get-subscription-items/${subscriptionId}`,
+      {
+        method: "GET",
+      }
+    );
+  },
   getCustomer: async () => {
     return await request(`/sundev-billing/get-customer`, {
       method: "GET",

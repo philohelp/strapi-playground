@@ -36,6 +36,15 @@ module.exports = [
     },
   },
   {
+    method: "GET",
+    path: "/get-subscription-items/:subscriptionId",
+    handler: "myController.getSubscriptionItems",
+    config: {
+      auth: false,
+      policies: [],
+    },
+  },
+  {
     method: "POST",
     path: "/update-customer",
     handler: "myController.updateCustomer",

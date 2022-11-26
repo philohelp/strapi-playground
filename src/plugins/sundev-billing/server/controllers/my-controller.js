@@ -33,10 +33,22 @@ module.exports = ({ strapi }) => ({
   async getSubscriptions(ctx) {
     const customerId = getPluginConfig(strapi, "customerId");
     const subscriptions = await stripe.subscriptions.list({
-      // customer: "cus_KQVDgsezcABG4M",
       customer: customerId,
+      // customer: "cus_KQVDgsezcABG4M",
+      // expand: ["data.items.data.plan.product"],
+      // expand: ["data.plan.product"],
     });
     return subscriptions;
+  },
+  async getSubscriptionItems(ctx) {
+    // const { body } = ctx.request;
+    // const { subscriptionId } = body;
+    const subscriptionId = ctx.params.subscriptionId;
+    const subscriptionItems = await stripe.subscriptionItems.list({
+      subscription: subscriptionId,
+      expand: ["data.price.product"],
+    });
+    return subscriptionItems;
   },
   async getCustomer(ctx) {
     const customerId = getPluginConfig(strapi, "customerId");

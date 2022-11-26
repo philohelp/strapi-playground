@@ -57,7 +57,7 @@ function MyInvoices({ invoices }) {
                 variant="pi"
                 textColor={item.paid ? "success500" : "danger500"}
               >
-                {item.paid ? " [payée]" : " [à payer]"}
+                {item.paid ? " (payée)" : " (à payer)"}
               </Typography>
             </div>
             <a

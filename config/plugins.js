@@ -5,7 +5,7 @@ module.exports = ({ env }) => ({
     config: {
       // customerId: env("STRIPE_CUSTOMER_ID"),
       // customerId: "cus_MrA2JnxwhH7Ck5", // Dialogues
-      customerId: "cus_MnIUTta2eoXbia", // Test mode
+      customerId: env("STRIPE_CUSTOMER_ID"), // Test mode
       companyName: "Sur un nuage",
       companyDescription:
         "Retrouvez toutes les informations concernant votre abonnement.",

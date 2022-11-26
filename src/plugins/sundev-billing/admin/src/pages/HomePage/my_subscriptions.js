@@ -7,10 +7,9 @@ import { Box } from "@strapi/design-system/Box";
 import { Loader } from "@strapi/design-system/Loader";
 
 import { Typography } from "@strapi/design-system/Typography";
-import Download from "@strapi/icons/Download";
-import { Icon } from "@strapi/design-system/Icon";
 import EmptyPage from "./empty_page";
 import NoElement from "./no_element";
+import ProductsList from "./products";
 
 const options = {
   year: "numeric",
@@ -35,6 +34,8 @@ function getInterval(interval) {
 }
 
 function MySubscriptions({ subscriptions }) {
+  const [isExpanded, setIsExpanded] = useState(false);
+  const toggle = () => setIsExpanded(!isExpanded);
   if (!subscriptions || (subscriptions && subscriptions.length === 0))
     return null;
   console.log("subscriptions", subscriptions);
@@ -42,38 +43,52 @@ function MySubscriptions({ subscriptions }) {
     <div>
       <div style={{ marginTop: 12 }}>
         {subscriptions.map((item, index) => (
-          <Box
-            key={item.id}
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              padding: 12,
-            }}
-            background={isEven(index) ? "neutral0" : "primary100"}
-          >
-            <div>
-              <Typography variant="pi" style={{ fontWeight: "600" }}>
-                Abonnement souscrit le
-                <Typography variant="pi" textColor={"primary500"}>
-                  {" "}
-                  {getDate(item.start_date)}
+          <div key={item.id}>
+            <Box
+              key={item.id}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                padding: 12,
+              }}
+              background={isEven(index) ? "neutral0" : "primary100"}
+            >
+              <div>
+                <Typography variant="pi" style={{ fontWeight: "600" }}>
+                  Abonnement souscrit le
+                  <Typography variant="pi" textColor={"primary500"}>
+                    {" "}
+                    {getDate(item.start_date)}
+                  </Typography>
                 </Typography>
-              </Typography>
-              <br />
-              <Typography
-                variant="pi"
-                textColor={"primary500"}
-                style={{ fontWeight: "700" }}
-              >
-                {item.plan.amount / 100}€HT / {getInterval(item.plan.interval)}
-              </Typography>
-            </div>
-            <div>
-              <Typography variant="pi" style={{ fontWeight: "300" }}>
-                Voir les produits
-              </Typography>
-            </div>
-          </Box>
+                <br />
+                <Typography
+                  variant="pi"
+                  textColor={"primary500"}
+                  style={{ fontWeight: "700" }}
+                >
+                  {item.plan.amount / 100}€HT /{" "}
+                  {getInterval(item.plan.interval)}
+                </Typography>
+              </div>
+              <div>
+                <Typography
+                  variant="pi"
+                  style={{ fontWeight: "300", cursor: "pointer" }}
+                  onClick={toggle}
+                >
+                  {isExpanded
+                    ? "Masquer les produits △"
+                    : "Voir les produits ▽"}
+                </Typography>
+              </div>
+            </Box>
+            {isExpanded && (
+              <div>
+                <ProductsList subscriptionId={item.id} />
+              </div>
+            )}
+          </div>
         ))}
       </div>
     </div>
