@@ -14,14 +14,16 @@ import MyInfos from "./my_infos";
 import MyInvoices from "./my_invoices";
 import EmptyPage from "./empty_page";
 
+import Ailes from "../../components/PluginIcon/ailes";
+
 import { buildInfosObject } from "../../utils/functions";
 
-function HomePage({ infos, setInfos }) {
+function HomePage({ infos, fetchCustomerInfos }) {
   return (
     <ContentLayout>
       <GridLayout>
         <Box style={{ backgroundColor: "#fff", boxShadow: "5px 5px 5px #ccc" }}>
-          <MyInfos infos={infos} />
+          <MyInfos infos={infos} fetchCustomerInfos={fetchCustomerInfos} />
         </Box>
         <Box>
           <MyInvoices />
@@ -70,7 +72,7 @@ function HomePageWithData() {
   if (isError) {
     return <EmptyPage />;
   }
-  return <HomePage infos={infos} setInfos={setInfos} />;
+  return <HomePage infos={infos} fetchCustomerInfos={fetchCustomerInfos} />;
 }
 
 function HomePageLayout() {
@@ -82,14 +84,18 @@ function HomePageLayout() {
   }, []);
   return (
     <div>
-      <BaseHeaderLayout
-        title={companyInfos.title}
-        subtitle={companyInfos.subtitle}
-        // title=""
-        // subtitle=""
-        as="h2"
-        style={{ color: "#396c87" }}
-      />
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <BaseHeaderLayout
+          title={companyInfos.title || ""}
+          subtitle={companyInfos.subtitle || ""}
+          as="h2"
+          style={{ color: "#396c87" }}
+        />
+        <div style={{ width: 100, marginTop: 20, marginRight: 100 }}>
+          <Ailes color="red" />
+        </div>
+      </div>
+
       <HomePageWithData />
     </div>
   );

@@ -19,6 +19,7 @@ const myRequests = {
   updateCustomer: async (newCustomer) => {
     return await request(`/sundev-billing/update-customer`, {
       method: "POST",
+      body: { ...newCustomer },
     });
   },
 };

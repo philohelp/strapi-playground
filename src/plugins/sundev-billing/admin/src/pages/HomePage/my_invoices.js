@@ -64,7 +64,11 @@ function MyInvoices({ invoices }) {
                     {item.paid ? " [payée]" : " [à payer]"}
                   </Typography>
                 </div>
-                <a href={item.invoice_pdf} download={true}>
+                <a
+                  href={item.invoice_pdf}
+                  download={true}
+                  style={{ marginTop: 10 }}
+                >
                   <Icon
                     width={`0.8rem`}
                     height={`0.8rem`}

@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import myRequests from "../../api";
 
 import { useFormik } from "formik";
 import * as Yup from "yup";
@@ -9,8 +10,10 @@ import { Box } from "@strapi/design-system/Box";
 import { Typography } from "@strapi/design-system/Typography";
 import { Button } from "@strapi/design-system/Button";
 import { Stack } from "@strapi/design-system/Stack";
+import Feedback from "./feedback";
 
 export default function MyInfos({ infos }) {
+  const [feedbackActivated, setFeedbackActivated] = useState("hide");
   if (!infos) return null;
   const formik = useFormik({
     initialValues: {
@@ -28,6 +31,25 @@ export default function MyInfos({ infos }) {
     }),
     onSubmit: async (values) => {
       console.log("values", values);
+      const updatedCustomer = {
+        email: values.email,
+        name: values.name,
+        phone: values.phone,
+        address: {
+          line1: values.line1,
+          line2: values.line2,
+          postal_code: values.postal_code,
+          city: values.city,
+        },
+      };
+      await myRequests.updateCustomer(updatedCustomer).then((res) => {
+        console.log(res);
+        if (!res) {
+          return;
+        } else if (res && res.id) {
+          setFeedbackActivated("success");
+        }
+      });
     },
   });
   return (
@@ -119,7 +141,11 @@ export default function MyInfos({ infos }) {
               marginBottom: 24,
             }}
           >
-            <div style={{ marginLeft: 8, marginTop: 20 }}>
+            <div style={{ marginLeft: 8, marginTop: 20, display: "flex" }}>
+              <Feedback
+                feedbackActivated={feedbackActivated}
+                setFeedbackActivated={setFeedbackActivated}
+              />
               <Button type="submit" onClick={formik.handleSubmit}>
                 Enregistrer
               </Button>

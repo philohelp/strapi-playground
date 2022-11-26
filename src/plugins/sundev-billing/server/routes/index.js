@@ -18,18 +18,18 @@ module.exports = [
     },
   },
   {
-    method: "POST",
-    path: "/update-customer",
-    handler: "myController.updateCustomer",
+    method: "GET",
+    path: "/get-invoices",
+    handler: "myController.getInvoices",
     config: {
       auth: false,
       policies: [],
     },
   },
   {
-    method: "GET",
-    path: "/get-invoices",
-    handler: "myController.getInvoices",
+    method: "POST",
+    path: "/update-customer",
+    handler: "myController.updateCustomer",
     config: {
       auth: false,
       policies: [],
