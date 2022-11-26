@@ -54,7 +54,10 @@ export default function MyInfos({ infos }) {
   });
   return (
     <div>
-      <Box padding={4}>
+      <Box
+        padding={4}
+        style={{ backgroundColor: "#fff", boxShadow: "5px 5px 5px #ccc" }}
+      >
         <Box paddingTop={2} paddingBottom={4}>
           <Typography variant="beta" style={{ color: "#396c87" }}>
             Mes infos

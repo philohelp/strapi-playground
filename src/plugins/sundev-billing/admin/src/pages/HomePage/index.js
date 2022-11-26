@@ -12,6 +12,8 @@ import { Box } from "@strapi/design-system/Box";
 
 import MyInfos from "./my_infos";
 import MyInvoices from "./my_invoices";
+import MySubscriptions from "./my_subscriptions";
+
 import EmptyPage from "./empty_page";
 
 import Ailes from "../../components/PluginIcon/ailes";
@@ -22,10 +24,11 @@ function HomePage({ infos, fetchCustomerInfos }) {
   return (
     <ContentLayout>
       <GridLayout>
-        <Box style={{ backgroundColor: "#fff", boxShadow: "5px 5px 5px #ccc" }}>
+        <Box>
           <MyInfos infos={infos} fetchCustomerInfos={fetchCustomerInfos} />
         </Box>
         <Box>
+          <MySubscriptions />
           <MyInvoices />
         </Box>
       </GridLayout>
@@ -43,6 +46,7 @@ function HomePageWithData() {
       if (customer.error) {
         throw new Error("Error retrieving customer from Stripe");
       } else {
+        console.log("customer infos", customer);
         const flattenInfos = buildInfosObject(customer);
         setInfos(flattenInfos);
         setIsLoading(false);

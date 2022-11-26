@@ -24,13 +24,26 @@ module.exports = ({ strapi }) => ({
   async getInvoices(ctx) {
     const customerId = getPluginConfig(strapi, "customerId");
     const invoices = await stripe.invoices.list({
+      // customer: "cus_KQVDgsezcABG4M",
       customer: customerId,
     });
+    // return [];
     return invoices;
+  },
+  async getSubscriptions(ctx) {
+    const customerId = getPluginConfig(strapi, "customerId");
+    const subscriptions = await stripe.subscriptions.list({
+      // customer: "cus_KQVDgsezcABG4M",
+      customer: customerId,
+    });
+    return subscriptions;
   },
   async getCustomer(ctx) {
     const customerId = getPluginConfig(strapi, "customerId");
-    const customer = await stripe.customers.retrieve(customerId);
+    const customer = await stripe.customers.retrieve(
+      // "cus_KQVDgsezcABG4M"
+      customerId
+    );
     return customer;
   },
   async updateCustomer(ctx) {

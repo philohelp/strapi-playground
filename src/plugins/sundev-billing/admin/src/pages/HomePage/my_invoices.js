@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import stripeSundevRequests from "../../api";
+import myRequests from "../../api";
 
 import { fromUnixTime } from "date-fns";
 
@@ -10,6 +10,7 @@ import { Typography } from "@strapi/design-system/Typography";
 import Download from "@strapi/icons/Download";
 import { Icon } from "@strapi/design-system/Icon";
 import EmptyPage from "./empty_page";
+import NoElement from "./no_element";
 
 const options = {
   year: "numeric",
@@ -32,55 +33,48 @@ function MyInvoices({ invoices }) {
   console.log("invoices", invoices);
   return (
     <div>
-      <Box padding={4}>
-        <Box paddingTop={2} paddingBottom={4} paddingLeft={4} paddingRight={4}>
-          <Typography variant="beta" style={{ color: "#396c87" }}>
-            Mes factures
-          </Typography>
-          <div style={{ marginTop: 12 }}>
-            {invoices.map((item, index) => (
-              <Box
-                key={item.id}
-                style={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  padding: 12,
-                }}
-                background={isEven(index) ? "neutral0" : "primary100"}
+      <div style={{ marginTop: 12 }}>
+        {invoices.map((item, index) => (
+          <Box
+            key={item.id}
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              padding: 12,
+            }}
+            background={isEven(index) ? "neutral0" : "primary100"}
+          >
+            <div>
+              <Typography variant="pi" style={{ fontWeight: "600" }}>
+                Facture {item.number}
+              </Typography>
+              <br />
+              <Typography variant="pi" style={{ fontWeight: "600" }}>
+                du {getDate(item.created)}{" "}
+                <span>- {item.amount_due / 100}€HT</span>
+              </Typography>
+              <Typography
+                variant="pi"
+                textColor={item.paid ? "success500" : "danger500"}
               >
-                <div>
-                  <Typography variant="pi" style={{ fontWeight: "600" }}>
-                    Facture {item.number}
-                  </Typography>
-                  <br />
-                  <Typography variant="pi" style={{ fontWeight: "600" }}>
-                    du {getDate(item.created)}{" "}
-                    <span>- {item.amount_due / 100}€HT</span>
-                  </Typography>
-                  <Typography
-                    variant="pi"
-                    textColor={item.paid ? "success500" : "danger500"}
-                  >
-                    {item.paid ? " [payée]" : " [à payer]"}
-                  </Typography>
-                </div>
-                <a
-                  href={item.invoice_pdf}
-                  download={true}
-                  style={{ marginTop: 10 }}
-                >
-                  <Icon
-                    width={`0.8rem`}
-                    height={`0.8rem`}
-                    as={Download}
-                    style={{ cursor: "pointer" }}
-                  />
-                </a>
-              </Box>
-            ))}
-          </div>
-        </Box>
-      </Box>
+                {item.paid ? " [payée]" : " [à payer]"}
+              </Typography>
+            </div>
+            <a
+              href={item.invoice_pdf}
+              download={true}
+              style={{ marginTop: 10 }}
+            >
+              <Icon
+                width={`0.8rem`}
+                height={`0.8rem`}
+                as={Download}
+                style={{ cursor: "pointer" }}
+              />
+            </a>
+          </Box>
+        ))}
+      </div>
     </div>
   );
 }
@@ -91,10 +85,13 @@ function InvoicesWithData() {
   const [isError, setIsError] = useState(false);
   async function fetchInvoices() {
     try {
-      const invoices = await stripeSundevRequests.getInvoices();
+      const invoices = await myRequests.getInvoices();
       if (invoices.error) {
+        setIsError(true);
         throw new Error("Error retrieving invoices from Stripe");
       } else {
+        console.log("invoices", invoices);
+        setIsError(false);
         setInvoices(invoices.data);
         setIsLoading(false);
       }
@@ -123,10 +120,25 @@ function InvoicesWithData() {
   if (isError) {
     return <EmptyPage />;
   }
-  if (invoices && invoices.length === 0) {
-    return <p>Va te faire abonner</p>;
+  if (!invoices || (invoices && invoices.length === 0)) {
+    return <NoElement type="invoice" />;
   }
   return <MyInvoices invoices={invoices} />;
 }
 
-export default InvoicesWithData;
+function InvoiceLayout() {
+  return (
+    <div>
+      <Box padding={4}>
+        <Box paddingTop={2} paddingBottom={4} paddingLeft={4} paddingRight={4}>
+          <Typography variant="beta" style={{ color: "#396c87" }}>
+            Mes factures
+          </Typography>
+          <InvoicesWithData />
+        </Box>
+      </Box>
+    </div>
+  );
+}
+
+export default InvoiceLayout;

@@ -11,6 +11,11 @@ const myRequests = {
       method: "GET",
     });
   },
+  getSubscriptions: async () => {
+    return await request(`/sundev-billing/get-subscriptions`, {
+      method: "GET",
+    });
+  },
   getCustomer: async () => {
     return await request(`/sundev-billing/get-customer`, {
       method: "GET",
