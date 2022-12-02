@@ -38,7 +38,7 @@ function MySubscriptions({ subscriptions }) {
   const toggle = () => setIsExpanded(!isExpanded);
   if (!subscriptions || (subscriptions && subscriptions.length === 0))
     return null;
-  console.log("subscriptions", subscriptions);
+  // console.log("subscriptions", subscriptions);
   return (
     <div>
       <div style={{ marginTop: 12 }}>
@@ -106,7 +106,7 @@ function SubscriptionsWithData() {
         setIsError(true);
         throw new Error("Error retrieving subscriptions from Stripe");
       } else {
-        console.log("subscriptions", subscriptions);
+        // console.log("subscriptions", subscriptions);
         setIsError(false);
         setSubscriptions(subscriptions.data);
         setIsLoading(false);

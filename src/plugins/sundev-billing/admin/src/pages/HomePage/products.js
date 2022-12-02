@@ -8,7 +8,7 @@ export default function ProductWithData({ subscriptionId }) {
   const [items, setItems] = useState();
   useEffect(() => {
     myRequests.getSubscriptionItems(subscriptionId).then((res) => {
-      console.log("res", res);
+      //   console.log("subscription items", res);
       setItems(res.data);
     });
   }, []);

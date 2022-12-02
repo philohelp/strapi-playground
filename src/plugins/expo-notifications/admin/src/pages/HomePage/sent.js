@@ -52,7 +52,7 @@ function SentList({ notifications, isLoading }) {
 
 export default function Sent({ notifications, count, isLoading }) {
   const currentPage = getCurrentPageFromCount(count, 10);
-  console.log("currentPage", currentPage);
+  // console.log("currentPage", currentPage);
   return (
     <div style={{ backgroundColor: "white" }}>
       <Box paddingTop={6} paddingBottom={6} paddingLeft={4} paddingRight={4}>

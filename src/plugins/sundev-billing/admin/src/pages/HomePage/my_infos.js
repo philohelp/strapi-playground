@@ -30,7 +30,7 @@ export default function MyInfos({ infos }) {
       email: Yup.string().required("Ce champ est requis"),
     }),
     onSubmit: async (values) => {
-      console.log("values", values);
+      // console.log("values", values);
       const updatedCustomer = {
         email: values.email,
         name: values.name,
@@ -43,7 +43,7 @@ export default function MyInfos({ infos }) {
         },
       };
       await myRequests.updateCustomer(updatedCustomer).then((res) => {
-        console.log(res);
+        // console.log(res);
         if (!res) {
           return;
         } else if (res && res.id) {

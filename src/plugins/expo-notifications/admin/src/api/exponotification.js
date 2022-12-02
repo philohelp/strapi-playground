@@ -2,7 +2,7 @@ import { request } from "@strapi/helper-plugin";
 
 const expoNotificationsRequests = {
   getPagedNotifications: async (page = 1, pageSize = 10) => {
-    console.log("page", page, "pageSize", pageSize);
+    // console.log("page", page, "pageSize", pageSize);
     return await request(
       `/expo-notifications/findFrom/?page=${page}&pageSize=${pageSize}`,
       {

@@ -1,6 +1,6 @@
 module.exports = ({ env }) => ({
   "sundev-billing": {
-    enabled: true,
+    enabled: false,
     resolve: "./src/plugins/sundev-billing",
     config: {
       // customerId: env("STRIPE_CUSTOMER_ID"),

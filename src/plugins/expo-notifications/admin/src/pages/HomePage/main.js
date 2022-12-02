@@ -74,12 +74,12 @@ export default function Main({
       title: Yup.string().required("Ce champ est requis"),
     }),
     onSubmit: async (values) => {
-      console.log("values", values, "testMode", testMode, "tokens", tokens);
+      // console.log("values", values, "testMode", testMode, "tokens", tokens);
       if (!testMode && tokens.length !== 0) {
         await notificationsRequests
           .createNotification(values, tokens)
           .then((res) => {
-            console.log(res);
+            // console.log(res);
             refreshNotificationsState();
             resetForm();
           });

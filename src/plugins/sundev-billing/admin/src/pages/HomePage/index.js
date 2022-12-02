@@ -46,7 +46,7 @@ function HomePageWithData() {
       if (customer.error) {
         throw new Error("Error retrieving customer from Stripe");
       } else {
-        console.log("customer infos", customer);
+        // console.log("customer infos", customer);
         const flattenInfos = buildInfosObject(customer);
         setInfos(flattenInfos);
         setIsLoading(false);

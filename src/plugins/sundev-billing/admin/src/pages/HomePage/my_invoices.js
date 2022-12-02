@@ -30,7 +30,7 @@ function isEven(n) {
 
 function MyInvoices({ invoices }) {
   if (!invoices || (invoices && invoices.length === 0)) return null;
-  console.log("invoices", invoices);
+  // console.log("invoices", invoices);
   return (
     <div>
       <div style={{ marginTop: 12 }}>
@@ -90,7 +90,7 @@ function InvoicesWithData() {
         setIsError(true);
         throw new Error("Error retrieving invoices from Stripe");
       } else {
-        console.log("invoices", invoices);
+        // console.log("invoices", invoices);
         setIsError(false);
         setInvoices(invoices.data);
         setIsLoading(false);

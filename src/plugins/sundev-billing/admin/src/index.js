@@ -10,7 +10,7 @@ const name = pluginPkg.strapi.name;
 async function getCompanyInfos() {
   const infos = await myRequests.getCompanyInfos();
   const companyName = infos.title;
-  console.log("companyName from plugin index", companyName);
+  // console.log("companyName from plugin index", companyName);
   return companyName;
 }
 

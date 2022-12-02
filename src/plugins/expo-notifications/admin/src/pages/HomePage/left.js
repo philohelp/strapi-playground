@@ -34,7 +34,7 @@ export default function Left({
   count,
 }) {
   const currentPage = getCurrentPageFromCount(count, 10);
-  console.log("currentPage", currentPage);
+  // console.log("currentPage", currentPage);
   const sortedNotifs = _.orderBy(notifications, ["createdAt"], ["desc"]);
   return (
     <Box padding={4}>
