@@ -1,0 +1,34 @@
+{
+  "name": "stripe-billing",
+  "version": "1.0.0",
+  "description": "This plugin allows to manage Stripe customer infos and billings.",
+  "strapi": {
+    "name": "stripe-billing",
+    "description": "This plugin allows to manage Stripe customer infos and billings.",
+    "kind": "plugin",
+    "displayName": "Sundev Billing"
+  },
+  "dependencies": {
+    "stripe": "^11.1.0"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.1.7"
+  },
+  "author": {
+    "name": "Thomas Poirier",
+    "email": "opendev@surunnuage.dev",
+    "url": "https://www.surunnuage.dev"
+  },
+  "maintainers": [
+    {
+      "name": "Sur un nuage",
+      "email": "opendev@surunnuage.dev",
+      "url": "https://www.surunnuage.dev"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

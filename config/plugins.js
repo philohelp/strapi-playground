@@ -1,7 +1,7 @@
 module.exports = ({ env }) => ({
-  "sundev-billing": {
-    enabled: false,
-    resolve: "./src/plugins/sundev-billing",
+  "stripe-billing": {
+    enabled: true,
+    resolve: "./src/plugins/stripe-billing",
     config: {
       // customerId: env("STRIPE_CUSTOMER_ID"),
       // customerId: "cus_MrA2JnxwhH7Ck5", // Dialogues
@@ -9,7 +9,7 @@ module.exports = ({ env }) => ({
       companyName: "Sur un nuage",
       companyDescription:
         "Retrouvez toutes les informations concernant votre abonnement.",
-      companyLogo: "https://surunnuage.dev/logo.png",
+      companyLogo: "https://surunnuage.com/img/logo-footer.png",
       companyIcon: "https://surunnuage.dev/favicon.ico",
     },
   },
