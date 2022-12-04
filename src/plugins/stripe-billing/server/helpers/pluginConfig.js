@@ -5,7 +5,8 @@ const pluginId = require("./pluginId");
  */
 
 const getPluginConfig = (strapi, field = "customerId") => {
-  return strapi.plugin(pluginId).config(field);
+  const pluginConfig = strapi.plugin(pluginId).config(field);
+  return pluginConfig;
 };
 
 module.exports = getPluginConfig;

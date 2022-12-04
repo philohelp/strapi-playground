@@ -1,22 +1,26 @@
 {
-  "name": "expo-notifications",
-  "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "name": "@surunnuage/expo-notifications",
+  "version": "1.0.0",
+  "description": "Send expo notifications directly from Strapi",
   "strapi": {
     "name": "expo-notifications",
-    "description": "Description of Expo Notifications plugin",
+    "description": "Send expo notifications directly from Strapi",
     "kind": "plugin",
-    "displayName": "Expo Notifications"
+    "displayName": "My Notifications"
   },
   "dependencies": {
     "expo-server-sdk": "^3.6.0"
   },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Thomas Poirier",
+    "email": "opendev@surunnuage.dev",
+    "url": "https://www.surunnuage.dev"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Sur un nuage .dev",
+      "email": "opendev@surunnuage.dev",
+      "url": "https://www.surunnuage.dev"
     }
   ],
   "engines": {

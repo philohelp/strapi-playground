@@ -10,14 +10,12 @@ module.exports = ({ strapi }) => ({
       "companyDescription"
     );
     const companyLogo = await getPluginConfig(strapi, "companyLogo");
-    const companyIcon = await getPluginConfig(strapi, "companyIcon");
     const companyInfos = {
-      title: companyName ? companyName : "Billing",
+      title: companyName ? companyName : "Stripe-Billing",
       subtitle: companyDescription
         ? companyDescription
-        : "All the relevant information about your billing",
+        : "Manage your Stripe subscriptions from Strapi",
       logo: companyLogo ? companyLogo : undefined,
-      icon: companyIcon ? companyIcon : undefined,
     };
     return companyInfos;
   },

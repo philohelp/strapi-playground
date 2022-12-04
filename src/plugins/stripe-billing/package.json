@@ -1,12 +1,12 @@
 {
-  "name": "stripe-billing",
+  "name": "@surunnuage/stripe-billing",
   "version": "1.0.0",
-  "description": "This plugin allows to manage Stripe customer infos and billings.",
+  "description": "Manage Stripe subscriptions customer's infos and bills directly from Strapi.",
   "strapi": {
     "name": "stripe-billing",
-    "description": "This plugin allows to manage Stripe customer infos and billings.",
+    "description": "Manage Stripe subscriptions customer's infos and bills directly from Strapi.",
     "kind": "plugin",
-    "displayName": "Sundev Billing"
+    "displayName": "My Subscriptions"
   },
   "dependencies": {
     "stripe": "^11.1.0"
@@ -21,7 +21,7 @@
   },
   "maintainers": [
     {
-      "name": "Sur un nuage",
+      "name": "Sur un nuage .dev",
       "email": "opendev@surunnuage.dev",
       "url": "https://www.surunnuage.dev"
     }

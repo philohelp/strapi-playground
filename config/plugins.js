@@ -9,8 +9,7 @@ module.exports = ({ env }) => ({
       companyName: "Sur un nuage",
       companyDescription:
         "Retrouvez toutes les informations concernant votre abonnement.",
-      companyLogo: "https://surunnuage.com/img/logo-footer.png",
-      companyIcon: "https://surunnuage.dev/favicon.ico",
+      // companyLogo: "https://surunnuage.com/img/logo-footer.png",
     },
   },
   ckeditor: true,

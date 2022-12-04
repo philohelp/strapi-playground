@@ -81,6 +81,7 @@ function HomePageLayout() {
   const [companyInfos, setCompanyInfos] = useState({});
   useEffect(async () => {
     const infos = await myRequests.getCompanyInfos();
+    console.log("infos", infos);
     setCompanyInfos(infos);
   }, []);
   return (
@@ -92,9 +93,11 @@ function HomePageLayout() {
           as="h2"
           style={{ color: "#396c87" }}
         />
-        <div style={{ marginTop: 20, marginRight: 100 }}>
-          <img src={companyInfos.logo} height={100} />
-        </div>
+        {companyInfos.logo && (
+          <div style={{ marginTop: 20, marginRight: 100 }}>
+            <img src={companyInfos.logo} height={100} />
+          </div>
+        )}
       </div>
       <HomePageWithData />
     </div>
