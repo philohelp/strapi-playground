@@ -1,12 +1,16 @@
 {
   "name": "@surunnuage/stripe-billing",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Manage Stripe subscriptions customer's infos and bills directly from Strapi.",
   "strapi": {
     "name": "stripe-billing",
     "description": "Manage Stripe subscriptions customer's infos and bills directly from Strapi.",
     "kind": "plugin",
     "displayName": "My Subscriptions"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sur-un-nuage/strapi-plugin-stripe-billing"
   },
   "dependencies": {
     "stripe": "^11.1.0"

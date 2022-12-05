@@ -1,4 +1,12 @@
 module.exports = ({ env }) => ({
+  "freedcamp-tickets": {
+    enabled: true,
+    resolve: "./src/plugins/freedcamp-tickets",
+    config: {
+      freedcampKey: env("FREEDCAMP_KEY"),
+      projectId: "3244328",
+    },
+  },
   "stripe-billing": {
     enabled: true,
     resolve: "./src/plugins/stripe-billing",

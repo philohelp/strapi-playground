@@ -1,0 +1,25 @@
+{
+  "name": "freedcamp-tickets",
+  "version": "0.0.0",
+  "description": "This is the description of the plugin.",
+  "strapi": {
+    "name": "freedcamp-tickets",
+    "description": "Description of Freedcamp Tickets plugin",
+    "kind": "plugin",
+    "displayName": "Freedcamp Tickets"
+  },
+  "dependencies": {},
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "maintainers": [
+    {
+      "name": "A Strapi developer"
+    }
+  ],
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
