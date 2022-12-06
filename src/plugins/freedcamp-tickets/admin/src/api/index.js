@@ -6,6 +6,12 @@ const myRequests = {
       method: "GET",
     });
   },
+  createIssue: async (data) => {
+    return await request(`/freedcamp-tickets/create-issue`, {
+      method: "POST",
+      body: data,
+    });
+  },
 };
 
 export default myRequests;

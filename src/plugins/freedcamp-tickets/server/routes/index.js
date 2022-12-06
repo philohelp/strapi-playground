@@ -8,4 +8,13 @@ module.exports = [
       auth: false,
     },
   },
+  {
+    method: "POST",
+    path: "/create-issue",
+    handler: "myController.createIssue",
+    config: {
+      policies: [],
+      auth: false,
+    },
+  },
 ];

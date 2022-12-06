@@ -1,20 +1,27 @@
 {
-  "name": "freedcamp-tickets",
+  "name": "@surunnuage/freedcamp-tickets",
   "version": "0.0.0",
-  "description": "This is the description of the plugin.",
+  "description": "Manage Freedcamp tickets directly from Strapi.",
   "strapi": {
-    "name": "freedcamp-tickets",
-    "description": "Description of Freedcamp Tickets plugin",
+    "name": "strapi-plugin-freedcamp-tickets",
+    "description": "Manage Freedcamp tickets directly from Strapi.",
     "kind": "plugin",
-    "displayName": "Freedcamp Tickets"
+    "displayName": "My Tickets"
   },
   "dependencies": {},
+  "peerDependencies": {
+    "@strapi/strapi": "^4.1.7"
+  },
   "author": {
-    "name": "A Strapi developer"
+    "name": "Thomas Poirier",
+    "email": "opendev@surunnuage.dev",
+    "url": "https://www.surunnuage.dev"
   },
   "maintainers": [
     {
-      "name": "A Strapi developer"
+      "name": "Sur un nuage .dev",
+      "email": "opendev@surunnuage.dev",
+      "url": "https://www.surunnuage.dev"
     }
   ],
   "engines": {
