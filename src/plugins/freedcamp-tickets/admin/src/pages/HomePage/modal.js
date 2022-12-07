@@ -1,31 +1,29 @@
 import React, { useState } from "react";
 
-import { Button } from "@strapi/design-system";
-import { Typography } from "@strapi/design-system";
-import { DatePicker } from "@strapi/design-system";
-import { Box } from "@strapi/design-system";
 import {
+  Button,
+  Typography,
+  DatePicker,
+  Box,
   ModalLayout,
   ModalBody,
   ModalHeader,
   ModalFooter,
 } from "@strapi/design-system";
 
+import Plus from "@strapi/icons/Plus";
+
 export default function ModalButton() {
   const [isVisible, setIsVisible] = useState(false);
   const [date, setDate] = useState();
   return (
     <>
-      <Button onClick={() => setIsVisible((prev) => !prev)}>
-        Click to open Modal
-      </Button>
-      <p
-        style={{
-          height: "60vh",
-        }}
+      <Button
+        startIcon={<Plus />}
+        onClick={() => setIsVisible((prev) => !prev)}
       >
-        This is a raw content
-      </p>
+        Ajouter un ticket
+      </Button>
       {isVisible && (
         <ModalLayout
           onClose={() => setIsVisible((prev) => !prev)}
