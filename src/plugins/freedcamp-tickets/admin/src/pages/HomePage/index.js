@@ -3,6 +3,10 @@ import React, { useState, useEffect } from "react";
 import myRequests from "../../api";
 import pluginId from "../../pluginId";
 
+import ChartCircle from "@strapi/icons/ChartCircle";
+import CheckCircle from "@strapi/icons/CheckCircle";
+import Clock from "@strapi/icons/Clock";
+
 import {
   BaseHeaderLayout,
   HeaderLayout,
@@ -48,14 +52,17 @@ const HomePage = ({ issues, fetchIssues }) => {
     {
       name: "Ouverts",
       items: opened,
+      icon: ChartCircle,
     },
     {
       name: "En cours",
       items: inProgress,
+      icon: Clock,
     },
     {
       name: "Terminés",
       items: completed,
+      icon: CheckCircle,
     },
   ];
   return (
@@ -71,10 +78,17 @@ const HomePage = ({ issues, fetchIssues }) => {
           as="h2"
         />
       </Box>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)" }}>
+      <div
+        style={{
+          marginLeft: 30,
+          marginRight: 25,
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+        }}
+      >
         {columnNames.map((item) => (
-          <div key={item.name}>
-            <Column items={item.items} name={item.name} />
+          <div key={item.name} style={{ padding: 4 }}>
+            <Column items={item.items} name={item.name} icon={item.icon} />
           </div>
         ))}
       </div>
