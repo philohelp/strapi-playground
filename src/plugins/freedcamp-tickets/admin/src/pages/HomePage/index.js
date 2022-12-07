@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import myRequests from "../../api";
 
 import pluginId from "../../pluginId";
+import ModalButton from "./modal";
 
 const newIssue = {
   title: "Voici un test n°569",
@@ -25,6 +26,7 @@ const HomePage = () => {
   return (
     <div>
       <h1>{pluginId}&apos;s HomePage</h1>
+      <ModalButton />
       <button onClick={handlePostIssue}>Post issue</button>
     </div>
   );
