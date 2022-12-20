@@ -8,19 +8,23 @@ import useQueryParams from "../../utils/useQueryParams";
 
 import Main from "./main";
 
+import { buildReceiversOptions } from "./functions";
+
 export default function HomePageWithData() {
   const [isLoading, setIsLoading] = useState(true);
   const [count, setCount] = useState(0);
   const [notifications, setNotifications] = useState([]);
-  const [recipients, setRecipients] = useState([]);
-  const [recipientsCount, setRecipientsCount] = useState(0);
+  const [receivers, setReceivers] = useState([]);
+  const [receiversCount, setReceiversCount] = useState(0);
   // const location = useLocation();
   const [{ query }] = useQueryParams();
 
   const fetchRecipients = async () => {
     const data = await notificationsRequests.getPagedRecipients(0);
-    setRecipients(data.recipients);
-    setRecipientsCount(data.count);
+    console.log("fetched receivers", data);
+    const options = buildReceiversOptions(data.recipients);
+    setReceivers(options);
+    setReceiversCount(data.count);
   };
 
   const fetchData = async () => {
@@ -63,8 +67,8 @@ export default function HomePageWithData() {
       <Main
         notifications={notifications}
         count={count}
-        recipients={recipients}
-        recipientsCount={recipientsCount}
+        receivers={receivers}
+        receiversCount={receiversCount}
         refreshNotificationsState={refreshNotificationsState}
         isLoading={isLoading}
       />

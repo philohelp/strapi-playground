@@ -11,23 +11,16 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 import {
-  // Layout,
   BaseHeaderLayout,
-  // HeaderLayout,
   TwoColsLayout,
   ContentLayout,
 } from "@strapi/design-system/Layout";
 
 import Sender from "./sender";
 import Sent from "./sent";
-import Right from "./receivers";
+import Receivers from "./receivers";
 
 import pluginId from "../../pluginId";
-
-import receivers from "./fake_receivers.json";
-import useQueryParams from "../../utils/useQueryParams";
-
-const testToken = "ExponentPushToken[onEOs5EghMJjPDrnEeiOP9]";
 
 const Pencil = () => (
   <Icon
@@ -41,16 +34,13 @@ const Pencil = () => (
 export default function Main({
   notifications,
   count,
-  recipients,
-  recipientsCount,
+  receivers,
+  receiversCount,
   refreshNotificationsState,
   isLoading,
 }) {
-  console.log("parseInt", parseInt(10 / 10));
   const [tokens, setTokens] = useState([]);
   const [testMode, setTestMode] = useState(false);
-  const [{ query }] = useQueryParams();
-  console.log("query", query);
 
   const addToken = (token) => {
     setTokens([...tokens, token]);
@@ -59,12 +49,11 @@ export default function Main({
     setTokens(tokens.filter((item) => item !== token));
   };
   const addAll = () => {
-    setTokens(recipients.map((item) => item.expoPushToken));
+    setTokens(receivers.map((item) => item.expoPushToken));
   };
   const removeAll = () => {
     setTokens([]);
   };
-
   const formik = useFormik({
     initialValues: {
       title: "",
@@ -84,7 +73,7 @@ export default function Main({
             resetForm();
           });
       } else {
-        console.log("no recipients");
+        console.log("no receivers");
       }
     },
   });
@@ -106,8 +95,8 @@ export default function Main({
   return (
     <div>
       <BaseHeaderLayout
-        title="Expo notifications"
-        subtitle={`${count} notifications sent`}
+        title="Mes notifications"
+        subtitle={`${count} notifications envoyées`}
         as="h2"
       />
       <ContentLayout>
@@ -120,11 +109,11 @@ export default function Main({
             />
           }
           endCol={
-            <Right
-              recipients={recipients}
-              recipientsCount={recipientsCount}
+            <Receivers
               receivers={receivers}
+              receiversCount={receiversCount}
               tokens={tokens}
+              setTokens={setTokens}
               addToken={addToken}
               removeToken={removeToken}
               addAll={addAll}

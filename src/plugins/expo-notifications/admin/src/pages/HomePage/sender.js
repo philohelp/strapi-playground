@@ -1,10 +1,7 @@
 import React from "react";
 import _ from "lodash";
 
-import { Box } from "@strapi/design-system/Box";
-import { Typography } from "@strapi/design-system/Typography";
-import { Button } from "@strapi/design-system/Button";
-import { Stack } from "@strapi/design-system/Stack";
+import { Box, Typography, Button, Stack } from "@strapi/design-system";
 
 import {
   Field,
@@ -20,12 +17,12 @@ export default function Sender({ formik, sendTest, sendForReal }) {
     <div style={{ height: 280 }}>
       <Box padding={4}>
         <Box paddingTop={2} paddingBottom={4}>
-          <Typography variant="beta">Send a new notification</Typography>
+          <Typography variant="beta">Nouvelle notification</Typography>
         </Box>
         <form>
           <Stack spacing={4}>
             <Field name="title">
-              <FieldLabel>Title</FieldLabel>
+              <FieldLabel>Titre</FieldLabel>
               <FieldInput
                 type="text"
                 placeholder="Choisissez un titre pour votre notification"
@@ -35,7 +32,7 @@ export default function Sender({ formik, sendTest, sendForReal }) {
               />
             </Field>
             <Field name="subtitle">
-              <FieldLabel>Subtitle</FieldLabel>
+              <FieldLabel>Sous-titre</FieldLabel>
               <FieldInput
                 type="text"
                 placeholder="Choisissez un sous-titre"
@@ -54,11 +51,11 @@ export default function Sender({ formik, sendTest, sendForReal }) {
             }}
           >
             <Button variant="secondary" type="submit" onClick={sendTest}>
-              Send a test
+              Envoyer un test
             </Button>
             <div style={{ marginLeft: 8 }}>
               <Button type="submit" onClick={sendForReal}>
-                Send
+                Envoyer
               </Button>
             </div>
           </div>

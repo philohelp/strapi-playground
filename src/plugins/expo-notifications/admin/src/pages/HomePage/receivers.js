@@ -3,46 +3,52 @@ import { Box } from "@strapi/design-system/Box";
 import { Typography } from "@strapi/design-system/Typography";
 
 import ReceiverItem from "./receiver_item";
+// import SelectReceivers from "./select_receivers";
 
-export default function Recipients({
-  recipients,
-  recipientsCount,
+export default function Receivers({
+  receivers,
   tokens,
-  addToken,
-  removeToken,
   removeAll,
   addAll,
+  addToken,
+  removeToken,
+  // receiversCount,
+  // setTokens,
 }) {
   return (
     <div style={{ height: 280 }}>
       <Box padding={6}>
-        <Box paddingBottom={6}>
-          <Typography variant="beta">Choose</Typography>
-          <br />
-          <Typography variant="beta">the recipients</Typography>
+        <Box paddingBottom={2}>
+          <Typography variant="beta">Destinataires</Typography>
         </Box>
         <div
           style={{
             display: "flex",
             justifyContent: "space-between",
-            marginBottom: 12,
+            marginBottom: 4,
             color: "#4A45FF",
           }}
         >
           <div style={{ cursor: "pointer" }} onClick={() => addAll()}>
             <Typography variant="pi" textColor="#4A45FF">
-              Select all
+              Sélectionner tout
             </Typography>
           </div>
           <div style={{ cursor: "pointer" }} onClick={() => removeAll()}>
             <Typography variant="pi" textColor="#4A45FF">
-              Unselect all
+              Déselectionner tout
             </Typography>
           </div>
         </div>
-        <div style={{ overflow: "scroll" }}>
-          {recipients.map((item) => (
-            <div key={item.id}>
+        <div
+          style={{
+            overflowY: "scroll",
+            marginTop: 16,
+            height: 160,
+          }}
+        >
+          {receivers.map((item) => (
+            <div key={item.label}>
               <ReceiverItem
                 item={item}
                 tokens={tokens}
@@ -52,6 +58,11 @@ export default function Recipients({
             </div>
           ))}
         </div>
+        {/* <SelectReceivers
+          receivers={receivers}
+          tokens={tokens}
+          setTokens={setTokens}
+        /> */}
       </Box>
     </div>
   );

@@ -1,13 +1,15 @@
 import React from "react";
 import _ from "lodash";
 
-import { Loader } from "@strapi/design-system/Loader";
-import { Box } from "@strapi/design-system/Box";
-import { Illo } from "../../components/Illo";
-import { EmptyStateLayout } from "@strapi/design-system/EmptyStateLayout";
-import { Typography } from "@strapi/design-system/Typography";
-import { Divider } from "@strapi/design-system/Divider";
+import {
+  Loader,
+  Box,
+  EmptyStateLayout,
+  Typography,
+  Divider,
+} from "@strapi/design-system";
 
+import { Illo } from "../../components/Illo";
 import NotificationItem from "./notification_item";
 import PaginationURLQuery from "../../components/paginationURLQuery";
 
@@ -24,7 +26,7 @@ function SentList({ notifications, isLoading }) {
       <div
         style={{ display: "flex", justifyContent: "center", marginTop: 100 }}
       >
-        <Loader />
+        <Loader>Loading content...</Loader>
       </div>
     );
   if (!notifications.length || notifications.length === 0) {
@@ -32,7 +34,7 @@ function SentList({ notifications, isLoading }) {
       <EmptyStateLayout
         shadow={null}
         icon={<Illo />}
-        content="You haven't sent any notification yet..."
+        content="Vous n'avez pas encore envoyé de notification..."
       />
     );
   }
@@ -57,7 +59,7 @@ export default function Sent({ notifications, count, isLoading }) {
     <div style={{ backgroundColor: "white" }}>
       <Box paddingTop={6} paddingBottom={6} paddingLeft={4} paddingRight={4}>
         <div style={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography variant="beta">Sent notifications</Typography>
+          <Typography variant="beta">Notifications envoyées</Typography>
           <PaginationURLQuery pagination={{ pageCount: currentPage }} />
         </div>
         <Divider unsetMargin={false} />

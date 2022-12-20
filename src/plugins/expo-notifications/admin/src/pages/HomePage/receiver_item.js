@@ -4,13 +4,13 @@ import { BaseCheckbox } from "@strapi/design-system/BaseCheckbox";
 import { Typography } from "@strapi/design-system/Typography";
 
 export default function ReceiverItem({ item, tokens, removeToken, addToken }) {
-  const { username, expoPushToken } = item;
-  const isIn = () => tokens.includes(expoPushToken);
+  const { label, value } = item;
+  const isIn = () => tokens.includes(value);
   const manageChange = () => {
     if (isIn()) {
-      removeToken(expoPushToken);
+      removeToken(value);
     } else {
-      addToken(expoPushToken);
+      addToken(value);
     }
   };
   return (
@@ -24,7 +24,7 @@ export default function ReceiverItem({ item, tokens, removeToken, addToken }) {
         />
         <div style={{ marginLeft: 6 }}>
           <div style={{ fontWeight: isIn() ? "700" : "400" }}>
-            <Typography variant="omega">{username}</Typography>
+            <Typography variant="omega">{label}</Typography>
           </div>
         </div>
       </div>

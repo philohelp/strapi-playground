@@ -36,7 +36,7 @@ export default function ModalButton() {
               as="h2"
               id="title"
             >
-              Title
+              Titre
             </Typography>
           </ModalHeader>
           <ModalBody>
