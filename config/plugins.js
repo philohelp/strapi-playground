@@ -1,4 +1,10 @@
 module.exports = ({ env }) => ({
+  "expo-notifications": {
+    enabled: true,
+    config: {
+      testToken: "ExponentPushToken[k7_gXqEStY8a82CA06gSmK]",
+    },
+  },
   "freedcamp-tickets": {
     enabled: true,
     resolve: "./src/plugins/freedcamp-tickets",

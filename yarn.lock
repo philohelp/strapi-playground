@@ -3873,6 +3873,13 @@
     lodash "4.17.21"
     yup "0.32.9"
 
+"@surunnuage/strapi-plugin-expo-notifications@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@surunnuage/strapi-plugin-expo-notifications/-/strapi-plugin-expo-notifications-1.0.3.tgz#abbcfd4c073915d53d18c797451fc6288fec2832"
+  integrity sha512-FW9nyzMhJQe+wfMHFGic9Kie5fhu20pUHS61Ipxp8Yx20W+xoZb+9oxtt8ZBvTA1Requ6hS/e96ZxkXb92X5jQ==
+  dependencies:
+    expo-server-sdk "^3.6.0"
+
 "@szmarczak/http-timer@^4.0.5":
   version "4.0.6"
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.6.tgz#b4a914bb62e7c272d4e5989fe4440f812ab1d807"
