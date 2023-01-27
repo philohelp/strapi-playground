@@ -5,28 +5,28 @@ module.exports = ({ env }) => ({
       testToken: "ExponentPushToken[k7_gXqEStY8a82CA06gSmK]",
     },
   },
-  "freedcamp-tickets": {
-    enabled: true,
-    resolve: "./src/plugins/freedcamp-tickets",
-    config: {
-      freedcampKey: env("FREEDCAMP_KEY"),
-      projectId: "3244328",
-    },
-  },
-  "stripe-billing": {
-    enabled: true,
-    resolve: "./src/plugins/stripe-billing",
-    config: {
-      // customerId: env("STRIPE_CUSTOMER_ID"),
-      // customerId: "cus_MrA2JnxwhH7Ck5", // Dialogues
-      customerId: env("STRIPE_CUSTOMER_ID"), // Test mode
-      companyName: "Sur un nuage",
-      companyDescription:
-        "Retrouvez toutes les informations concernant votre abonnement.",
-      // companyLogo: "https://surunnuage.com/img/logo-footer.png",
-    },
-  },
-  ckeditor: true,
+  // "freedcamp-tickets": {
+  //   enabled: true,
+  //   resolve: "./src/plugins/freedcamp-tickets",
+  //   config: {
+  //     freedcampKey: env("FREEDCAMP_KEY"),
+  //     projectId: "3244328",
+  //   },
+  // },
+  // "stripe-billing": {
+  //   enabled: true,
+  //   resolve: "./src/plugins/stripe-billing",
+  //   config: {
+  //     // customerId: env("STRIPE_CUSTOMER_ID"),
+  //     // customerId: "cus_MrA2JnxwhH7Ck5", // Dialogues
+  //     customerId: env("STRIPE_CUSTOMER_ID"), // Test mode
+  //     companyName: "Sur un nuage",
+  //     companyDescription:
+  //       "Retrouvez toutes les informations concernant votre abonnement.",
+  //     // companyLogo: "https://surunnuage.com/img/logo-footer.png",
+  //   },
+  // },
+  // ckeditor: true,
   "users-permissions": {
     config: {
       jwtSecret: env("JWT_SECRET"),
