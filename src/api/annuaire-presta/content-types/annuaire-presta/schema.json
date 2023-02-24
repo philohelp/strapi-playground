@@ -1,0 +1,178 @@
+{
+  "kind": "collectionType",
+  "collectionName": "annuaire_prestas",
+  "info": {
+    "singularName": "annuaire-presta",
+    "pluralName": "annuaire-prestas",
+    "displayName": "Annuaire presta",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "linkedin": {
+      "type": "string"
+    },
+    "webSite": {
+      "type": "string"
+    },
+    "email_presta": {
+      "type": "string"
+    },
+    "pays": {
+      "type": "customField",
+      "customField": "plugin::country-select.country"
+    },
+    "expertise_blockchain": {
+      "type": "customField",
+      "options": [
+        "Conseil - stratégie",
+        "Développement technique",
+        "Formation & acculturation"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "expertise_metaverse": {
+      "type": "customField",
+      "options": [
+        "Conseil - stratégie",
+        "Création campagne marketing",
+        "Création avatar",
+        "Achat média in-game",
+        "Business Model & Monétisation",
+        "Méta-commerce",
+        "Expertise immobilier virtuel",
+        "Création d'évènements virtuels",
+        "Gamification",
+        "Création d'expériences immersives",
+        "Formation / acculturation"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "expertise_dao": {
+      "type": "customField",
+      "options": [
+        "Conseil - stratégie",
+        "Développement technique",
+        "Formation & acculturation"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "expertise_tokenisation": {
+      "type": "customField",
+      "options": [
+        "Conseil - stratégie",
+        "Développement technique",
+        "Création communauté",
+        "Solution technique - éditeur",
+        "Formation & acculturation"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "ssii_editeur": {
+      "type": "customField",
+      "options": [
+        "Dev sur mesure d'univers 3D",
+        "Dev sur mesure de jeux",
+        "Dev sur mesure eCommerce",
+        "Solution 3D",
+        "Solution AR/VRIMIX",
+        "Solution DAO"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "expertise_nft": {
+      "type": "customField",
+      "options": [
+        "Conseil - stratégie",
+        "Création graphique",
+        "Développement technique",
+        "Création communauté - médiatisation - promotion",
+        "Solution technique - éditeur",
+        "Conseil NFT immobilier",
+        "Galerie virtuelle",
+        "Minting",
+        "Formation & acculturation",
+        "Création de jumeaux numériques"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "ville": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "richtext"
+    },
+    "flag_Metaverse": {
+      "type": "boolean"
+    },
+    "flag_NFT": {
+      "type": "boolean"
+    },
+    "flag_Token": {
+      "type": "boolean"
+    },
+    "flag_DAO": {
+      "type": "boolean"
+    },
+    "flag_Blockchain": {
+      "type": "boolean"
+    },
+    "flag_SSII": {
+      "type": "boolean"
+    },
+    "status": {
+      "type": "string"
+    },
+    "cas_clients": {
+      "type": "text"
+    },
+    "validation": {
+      "type": "string"
+    },
+    "objectID": {
+      "type": "string"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": ["images"]
+    },
+    "taille_entreprise": {
+      "type": "enumeration",
+      "enum": [
+        "Un(e) seul(e) salarié(e)",
+        "De 2 à 10 salariés",
+        "De 11 à 50 salariés",
+        "De 51 à 100 salariés",
+        "Plus de 100 salariés"
+      ]
+    },
+    "email_contact": {
+      "type": "email"
+    },
+    "expertises": {
+      "type": "customField",
+      "options": [
+        "Métaverse",
+        "NFT",
+        "Tokenisation",
+        "DAO",
+        "Blockchain",
+        "SSII - Éditeur"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    }
+  }
+}
