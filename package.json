@@ -10,7 +10,9 @@
     "strapi": "strapi",
     "admin": "strapi develop --watch-admin"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "better-sqlite3": "^8.1.0"
+  },
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^2.0.0",
     "@mattie-bundle/strapi-plugin-search": "^1.0.0-alpha.3",
@@ -27,7 +29,6 @@
     "@surunnuage/strapi-plugin-expo-notifications": "^1.0.3",
     "expo-server-sdk": "^3.6.0",
     "pg": "8.6.0",
-    "sqlite3": "^5.1.4",
     "strapi-plugin-country-select": "^1.0.0",
     "strapi-plugin-multi-select": "^1.1.0",
     "strapi-plugin-vercel-deploy": "^1.1.0",
