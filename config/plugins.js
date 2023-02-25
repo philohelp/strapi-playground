@@ -5,13 +5,13 @@ module.exports = ({ env }) => ({
       testToken: "ExponentPushToken[k7_gXqEStY8a82CA06gSmK]",
     },
   },
-  "open-ai": {
-    enabled: true,
-    resolve: "./src/plugins/open-ai",
-    config: {
-      API_TOKEN: env("OPENAI_API_TOKEN"),
-    },
-  },
+  // "open-ai": {
+  //   enabled: true,
+  //   resolve: "./src/plugins/open-ai",
+  //   config: {
+  //     API_TOKEN: env("OPENAI_API_TOKEN"),
+  //   },
+  // },
   // "freedcamp-tickets": {
   //   enabled: true,
   //   resolve: "./src/plugins/freedcamp-tickets",
