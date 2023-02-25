@@ -1,0 +1,35 @@
+{
+  "name": "@strapi/plugin-open-ai",
+  "version": "1.0.1",
+  "description": "The official plugin that allows you to create Open AI completion from a prompt",
+  "strapi": {
+    "name": "open-ai",
+    "description": "The official plugin that allows you to create Open AI completion from a prompt",
+    "kind": "plugin",
+    "displayName": "Open AI"
+  },
+  "author": "Strapi Solutions SAS <hi@strapi.io> (https://strapi.io)",
+  "maintainers": [
+    "Strapi Solutions SAS <hi@strapi.io> (https://strapi.io)"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strapi/strapi-plugin-open-ai.git"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "^4.0.0"
+  },
+  "engines": {
+    "node": ">=14.19.1 <=18.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strapi/strapi-plugin-open-ai/issues"
+  },
+  "homepage": "https://github.com/strapi/strapi-plugin-open-ai#readme",
+  "main": "strapi-admin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
