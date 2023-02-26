@@ -147,7 +147,9 @@
       "type": "media",
       "multiple": false,
       "required": false,
-      "allowedTypes": ["images"]
+      "allowedTypes": [
+        "images"
+      ]
     },
     "taille_entreprise": {
       "type": "enumeration",
@@ -171,6 +173,56 @@
         "DAO",
         "Blockchain",
         "SSII - Éditeur"
+      ],
+      "customField": "plugin::multi-select.multi-select"
+    },
+    "multi_pays": {
+      "type": "customField",
+      "options": [
+        "France:FR",
+        "Australie:AU",
+        "Brésil:BR",
+        "Canada:CA",
+        "Chine:CN",
+        "Argentine:AR",
+        "Allemagne:DE",
+        "Inde:IN",
+        "Indonésie:ID",
+        "Italie:IT",
+        "Japon:JP",
+        "Mexique:MX",
+        "Pays-Bas:NL",
+        "Pologne:PL",
+        "Russie:RU",
+        "Arabie saoudite:SA",
+        "Afrique du Sud:ZA",
+        "Corée du Sud:KR",
+        "Espagne:ES",
+        "Suède:SE",
+        "Suisse:CH",
+        "Turquie:TR",
+        "Royaume-Uni:GB",
+        "États-Unis:US",
+        "Autriche:AT",
+        "Belgique:BE",
+        "Bulgarie:BG",
+        "Chypre:CY",
+        "Croatie:HR",
+        "Danemark:DK",
+        "Estonie:EE",
+        "Finlande:FI",
+        "Grèce:GR",
+        "Hongrie:HU",
+        "Irlande:IE",
+        "Lettonie:LV",
+        "Lituanie:LT",
+        "Luxembourg:LU",
+        "Malte:MT",
+        "Pologne:PL",
+        "Portugal:PT",
+        "Roumanie:RO",
+        "Slovaquie:SK",
+        "Slovénie:SI"
       ],
       "customField": "plugin::multi-select.multi-select"
     }
