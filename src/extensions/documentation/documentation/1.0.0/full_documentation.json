@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "2023-09-27T19:15:34.152Z"
+    "x-generation-date": "2023-12-12T13:24:03.846Z"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -622,6 +622,7 @@
                                                                                         "action": {
                                                                                           "type": "string"
                                                                                         },
+                                                                                        "actionParameters": {},
                                                                                         "subject": {
                                                                                           "type": "string"
                                                                                         },
@@ -1309,6 +1310,7 @@
                                                                                           "action": {
                                                                                             "type": "string"
                                                                                           },
+                                                                                          "actionParameters": {},
                                                                                           "subject": {
                                                                                             "type": "string"
                                                                                           },
@@ -3089,6 +3091,7 @@
                                                                                                                   "action": {
                                                                                                                     "type": "string"
                                                                                                                   },
+                                                                                                                  "actionParameters": {},
                                                                                                                   "subject": {
                                                                                                                     "type": "string"
                                                                                                                   },
@@ -4131,6 +4134,7 @@
                                                                             "action": {
                                                                               "type": "string"
                                                                             },
+                                                                            "actionParameters": {},
                                                                             "subject": {
                                                                               "type": "string"
                                                                             },
@@ -5895,6 +5899,7 @@
                                                                                                                     "action": {
                                                                                                                       "type": "string"
                                                                                                                     },
+                                                                                                                    "actionParameters": {},
                                                                                                                     "subject": {
                                                                                                                       "type": "string"
                                                                                                                     },
@@ -6795,6 +6800,7 @@
                                                                                         "action": {
                                                                                           "type": "string"
                                                                                         },
+                                                                                        "actionParameters": {},
                                                                                         "subject": {
                                                                                           "type": "string"
                                                                                         },
@@ -8020,6 +8026,7 @@
                                                                                           "action": {
                                                                                             "type": "string"
                                                                                           },
+                                                                                          "actionParameters": {},
                                                                                           "subject": {
                                                                                             "type": "string"
                                                                                           },
@@ -9822,6 +9829,7 @@
                                                                                                                     "action": {
                                                                                                                       "type": "string"
                                                                                                                     },
+                                                                                                                    "actionParameters": {},
                                                                                                                     "subject": {
                                                                                                                       "type": "string"
                                                                                                                     },
@@ -11229,6 +11237,7 @@
                                                   "action": {
                                                     "type": "string"
                                                   },
+                                                  "actionParameters": {},
                                                   "subject": {
                                                     "type": "string"
                                                   },
@@ -11624,6 +11633,7 @@
                                                   "action": {
                                                     "type": "string"
                                                   },
+                                                  "actionParameters": {},
                                                   "subject": {
                                                     "type": "string"
                                                   },

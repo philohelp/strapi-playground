@@ -13,25 +13,25 @@
   "devDependencies": {},
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^2.0.0",
-    "@mattie-bundle/strapi-plugin-search": "^1.0.0-alpha.3",
-    "@mattie-bundle/strapi-provider-search-algolia": "^1.0.0-alpha.3",
-    "@strapi-newsletter/strapi": "^0.1.2",
     "@strapi/icons": "^0.0.1-alpha.4",
-    "@strapi/plugin-documentation": "^4.13.7",
-    "@strapi/plugin-graphql": "^4.13.7",
-    "@strapi/plugin-i18n": "^4.13.7",
-    "@strapi/plugin-users-permissions": "^4.13.7",
-    "@strapi/provider-email-sendgrid": "^4.13.7",
-    "@strapi/provider-upload-cloudinary": "^4.13.7",
-    "@strapi/strapi": "^4.13.7",
-    "@surunnuage/strapi-plugin-expo-notifications": "^1.0.3",
+    "@strapi/plugin-documentation": "^4.15.5",
+    "@strapi/plugin-graphql": "^4.15.5",
+    "@strapi/plugin-i18n": "^4.15.5",
+    "@strapi/plugin-users-permissions": "^4.15.5",
+    "@strapi/provider-email-sendgrid": "^4.15.5",
+    "@strapi/provider-upload-cloudinary": "^4.15.5",
+    "@strapi/strapi": "^4.15.5",
     "expo-server-sdk": "^3.6.0",
     "pg": "8.6.0",
+    "react": "^18.0.0",
+    "react-dom": "^18.0.0",
+    "react-router-dom": "^5.2.0",
     "sqlite3": "^5.1.6",
     "strapi-plugin-country-select": "^1.0.0",
     "strapi-plugin-multi-select": "^1.1.0",
     "strapi-plugin-vercel-deploy": "^1.1.0",
-    "stripe": "^11.1.0"
+    "stripe": "^11.1.0",
+    "styled-components": "^5.2.1"
   },
   "author": {
     "name": "Thpo"
@@ -40,8 +40,7 @@
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
   },
   "engines": {
-    "node": "16.15.1",
-    "npm": "8.11.0"
+    "node": "18.18.2"
   },
   "license": "MIT"
 }

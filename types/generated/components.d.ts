@@ -13,7 +13,7 @@ export interface BlockActivite extends Schema.Component {
   };
 }
 
-declare module '@strapi/strapi' {
+declare module '@strapi/types' {
   export module Shared {
     export interface Components {
       'block.activite': BlockActivite;

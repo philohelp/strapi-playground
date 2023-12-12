@@ -1,10 +1,10 @@
 module.exports = ({ env }) => ({
-  "expo-notifications": {
-    enabled: true,
-    config: {
-      testToken: "ExponentPushToken[k7_gXqEStY8a82CA06gSmK]",
-    },
-  },
+  // "expo-notifications": {
+  //   enabled: true,
+  //   config: {
+  //     testToken: "ExponentPushToken[k7_gXqEStY8a82CA06gSmK]",
+  //   },
+  // },
   "open-ai": {
     enabled: true,
     resolve: "./src/plugins/open-ai",
@@ -60,26 +60,6 @@ module.exports = ({ env }) => ({
         upload: {},
         delete: {},
       },
-    },
-  },
-  search: {
-    enabled: true,
-    excludedFields: [
-      "createdAt",
-      "createdBy",
-      "updatedBy",
-      "metiers",
-      "publishedAt",
-    ],
-    config: {
-      provider: "algolia",
-      providerOptions: {
-        apiKey: env("ALGOLIA_PROVIDER_ADMIN_API_KEY"),
-        applicationId: env("ALGOLIA_PROVIDER_APPLICATION_ID"),
-      },
-      contentTypes: [
-        { name: "api::famille-de-metier.famille-de-metier", index: "main" },
-      ],
     },
   },
   email: {
