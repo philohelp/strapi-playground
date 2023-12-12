@@ -1,16 +1,19 @@
 {
   "name": "strapi-playground",
-  "private": true,
   "version": "0.1.0",
+  "private": true,
   "description": "A Strapi playground",
+  "license": "MIT",
+  "author": {
+    "name": "Thpo"
+  },
   "scripts": {
+    "admin": "strapi develop --watch-admin",
+    "build": "strapi build",
     "develop": "strapi develop",
     "start": "strapi start",
-    "build": "strapi build",
-    "strapi": "strapi",
-    "admin": "strapi develop --watch-admin"
+    "strapi": "strapi"
   },
-  "devDependencies": {},
   "dependencies": {
     "@_sh/strapi-plugin-ckeditor": "^2.0.0",
     "@strapi/icons": "^0.0.1-alpha.4",
@@ -33,14 +36,12 @@
     "stripe": "^11.1.0",
     "styled-components": "^5.2.1"
   },
-  "author": {
-    "name": "Thpo"
+  "devDependencies": {},
+  "engines": {
+    "node": "18.18.2",
+    "npm": "9.8.1"
   },
   "strapi": {
     "uuid": "35d7a084-3088-4d0b-869e-f503693ee8e5"
-  },
-  "engines": {
-    "node": "18.18.2"
-  },
-  "license": "MIT"
+  }
 }
